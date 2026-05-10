@@ -183,8 +183,122 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="rol-item" onclick="setRol('musteri',this)"><div class="rol-av" style="background:#0369a1">BG</div><div><div style="font-size:12px;font-weight:700" id="t-rm-musteri">Müşteri</div><div style="font-size:10px;color:var(--text2)">Bilişim Garajı</div></div></div>
 </div>
 
+<!-- İDEIO SOCIAL OVERLAY -->
+<div id="ideio-social-overlay" style="display:none;flex-direction:column;min-height:100vh;background:var(--bg)">
+  <div style="background:var(--bg2);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:8px">
+      <div style="width:30px;height:30px;background:var(--purple);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700">IC</div>
+      <span style="font-size:13px;font-weight:700;color:var(--text)">ideio social</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <div class="lang-row">
+        <div class="lang-btn on" onclick="setLang('tr',this)">TR</div>
+        <div class="lang-btn" onclick="setLang('en',this)">EN</div>
+      </div>
+      <div class="icon-btn" onclick="toggleTheme()"><i class="ti ti-moon" style="font-size:15px"></i></div>
+      <div style="width:30px;height:30px;border-radius:50%;background:#0369a1;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700;cursor:pointer" onclick="setRol('yonetici',document.querySelector('.rol-item'))">BG</div>
+    </div>
+  </div>
+  <div style="padding:16px;max-width:800px;margin:0 auto;width:100%;display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:44px;height:44px;border-radius:12px;background:var(--purple-bg);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--purple)">BG</div>
+      <div>
+        <div style="font-size:16px;font-weight:700;color:var(--text)">bilişim_garajı</div>
+        <div style="font-size:12px;color:var(--text2)">7.685 takipçi · 3 onay bekliyor</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:2px">
+      <div class="period on" style="padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--purple);background:var(--purple);color:#fff;cursor:pointer;white-space:nowrap;flex-shrink:0">Tümü</div>
+      <div class="period" style="padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:var(--bg3);color:var(--text2);cursor:pointer;white-space:nowrap;flex-shrink:0">1 Oca — 31 Oca</div>
+      <div class="period" style="padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:var(--bg3);color:var(--text2);cursor:pointer;white-space:nowrap;flex-shrink:0">1 Şub — 28 Şub</div>
+      <div class="period" style="padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:var(--bg3);color:var(--text2);cursor:pointer;white-space:nowrap;flex-shrink:0">1 Mar — 31 Mar</div>
+      <div class="period" style="padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:var(--bg3);color:var(--text2);cursor:pointer;white-space:nowrap;flex-shrink:0">1 Nis — 30 Nis</div>
+      <div class="period" style="padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--purple);background:var(--purple);color:#fff;cursor:pointer;white-space:nowrap;flex-shrink:0">1 May — 31 May</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center"><div style="font-size:18px;font-weight:700;color:var(--amber)">3</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Onay bekliyor</div></div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center"><div style="font-size:18px;font-weight:700;color:var(--green)">8</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Onaylandı</div></div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center"><div style="font-size:18px;font-weight:700;color:var(--purple)">11</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Toplam</div></div>
+    </div>
+    <div style="font-size:12px;font-weight:700;color:var(--text2)">İçerikler — Mayıs 2026 <span style="color:var(--amber);font-weight:500;font-size:11px">· 3 onay bekliyor</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer" onclick="showSocialDetail(0)">
+        <div style="aspect-ratio:9/16;background:#1C1C2E;display:flex;align-items:center;justify-content:center;position:relative;padding:10px">
+          <div style="text-align:center"><div style="font-size:16px;font-weight:900;color:#fff;line-height:1.2">ÇIRAK<br>KALFA<br>USTA</div><div style="font-size:8px;color:rgba(255,255,255,.4);margin-top:6px">bilişim_garajı</div></div>
+          <div style="position:absolute;top:6px;left:6px;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;background:rgba(245,158,11,.25);color:#d97706" id="ss-tag0">Onay Bekliyor</div>
+        </div>
+        <div style="padding:8px 10px"><div style="font-size:11px;font-weight:600;color:var(--text)">Çırak - Kalfa - Usta</div><div style="font-size:10px;color:var(--text2);margin-top:2px">28 Mayıs 2026</div></div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer" onclick="showSocialDetail(1)">
+        <div style="aspect-ratio:9/16;background:#0f2027;display:flex;align-items:center;justify-content:center;position:relative">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center"><i class="ti ti-player-play" style="font-size:16px;color:#fff"></i></div><div style="font-size:9px;color:rgba(255,255,255,.5)">LMS Sistemi</div></div>
+          <div style="position:absolute;top:6px;left:6px;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;background:rgba(245,158,11,.25);color:#d97706" id="ss-tag1">Onay Bekliyor</div>
+        </div>
+        <div style="padding:8px 10px"><div style="font-size:11px;font-weight:600;color:var(--text)">LMS sistemi tanıtım</div><div style="font-size:10px;color:var(--text2);margin-top:2px">30 Mayıs 2026</div></div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer" onclick="showSocialDetail(2)">
+        <div style="aspect-ratio:9/16;background:#1a1a2e;display:flex;align-items:center;justify-content:center;position:relative;padding:10px">
+          <div style="text-align:center"><div style="font-size:20px;font-weight:900;color:#fff;line-height:1.1">SI<br>YAH</div><div style="font-size:12px;font-weight:700;color:#fff">ACT 300</div></div>
+          <div style="position:absolute;top:6px;left:6px;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;background:rgba(245,158,11,.25);color:#d97706" id="ss-tag2">Onay Bekliyor</div>
+        </div>
+        <div style="padding:8px 10px"><div style="font-size:11px;font-weight:600;color:var(--text)">Siyah ACT 300</div><div style="font-size:10px;color:var(--text2);margin-top:2px">15 Mayıs 2026</div></div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer">
+        <div style="aspect-ratio:9/16;background:#dc2626;display:flex;align-items:center;justify-content:center;position:relative;padding:10px">
+          <div style="text-align:center"><div style="font-size:18px;font-weight:900;color:#fff;line-height:1.1">KIR<br>MIZI<br>ACT</div></div>
+          <div style="position:absolute;top:6px;left:6px;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;background:rgba(34,197,94,.25);color:#16a34a">Paylaşıldı</div>
+        </div>
+        <div style="padding:8px 10px"><div style="font-size:11px;font-weight:600;color:var(--text)">Kırmızı ACT 200</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Paylaşıldı: 1 Mayıs</div></div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer">
+        <div style="aspect-ratio:9/16;background:#065f46;display:flex;align-items:center;justify-content:center;position:relative">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center"><i class="ti ti-player-play" style="font-size:16px;color:#fff"></i></div><div style="font-size:9px;color:rgba(255,255,255,.5);text-align:center">Hayallerine yaklaş</div></div>
+          <div style="position:absolute;top:6px;left:6px;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;background:rgba(34,197,94,.25);color:#16a34a">Paylaşıldı</div>
+        </div>
+        <div style="padding:8px 10px"><div style="font-size:11px;font-weight:600;color:var(--text)">Hayallerine yaklaş</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Paylaşıldı: 4 Mayıs</div></div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer">
+        <div style="aspect-ratio:9/16;background:#1e3a5f;display:flex;align-items:center;justify-content:center;position:relative;padding:10px">
+          <div style="font-size:11px;font-weight:700;color:#fff;text-align:center;line-height:1.3">Her bağlantı<br>bir mantık kurar</div>
+          <div style="position:absolute;top:6px;left:6px;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;background:rgba(34,197,94,.25);color:#16a34a">Paylaşıldı</div>
+        </div>
+        <div style="padding:8px 10px"><div style="font-size:11px;font-weight:600;color:var(--text)">Her bağlantı bir mantık</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Paylaşıldı: 7 Mayıs</div></div>
+      </div>
+    </div>
+    <div id="social-detail-wrap" style="display:none">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden">
+        <div style="background:var(--bg3);display:flex;align-items:center;justify-content:center;padding:24px;min-height:180px">
+          <div style="width:120px;aspect-ratio:9/16;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px" id="social-thumb-area">
+            <div style="font-size:12px;font-weight:900;color:#fff;text-align:center;line-height:1.2" id="social-thumb-txt">İçerik</div>
+          </div>
+        </div>
+        <div style="padding:14px 16px;border-bottom:1px solid var(--border)">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+            <div style="width:30px;height:30px;border-radius:50%;background:var(--purple-bg);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--purple)">BG</div>
+            <div><div style="font-size:12px;font-weight:700;color:var(--text)">bilişim_garajı</div><div style="font-size:10px;color:var(--text2)">7.685 takipçi</div></div>
+          </div>
+          <div style="font-size:12px;color:var(--text);line-height:1.6" id="social-caption">Açıklama...</div>
+          <div style="font-size:11px;color:var(--purple);margin-top:6px" id="social-hashtags">#hashtag</div>
+          <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">
+            <i class="ti ti-calendar" style="font-size:13px"></i><span id="social-date">Tarih</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)" id="social-actions">
+          <button onclick="socialRevize()" style="padding:14px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:700;cursor:pointer;border:none;background:none;color:var(--red);border-right:1px solid var(--border)"><i class="ti ti-refresh" style="font-size:15px"></i>Revize</button>
+          <button onclick="socialOnayla()" style="padding:14px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:700;cursor:pointer;border:none;background:none;color:var(--green)"><i class="ti ti-check" style="font-size:15px"></i>Onayla</button>
+        </div>
+        <div id="social-revize-box" style="display:none;padding:14px 16px;border-top:1px solid var(--border)">
+          <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:6px">Revize notunuzu yazın</div>
+          <textarea style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;font-size:12px;background:var(--bg2);color:var(--text);font-family:inherit;resize:none;min-height:70px;outline:none" placeholder="Nelerin değişmesini istiyorsunuz?"></textarea>
+          <button onclick="socialRevizeGonder()" style="background:var(--purple);color:#fff;border:none;border-radius:10px;padding:11px 16px;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:6px;margin-top:8px;width:100%;justify-content:center"><i class="ti ti-send" style="font-size:14px"></i>Gönder</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- AKIŞ ÇUBUĞU -->
-<div class="flow-bar">
+<div class="flow-bar" id="flow-bar-wrap">
   <div class="flow-step"><div class="flow-circle" style="background:#1D9E75">C</div><div class="flow-lbl" id="t-flow-c">Ceyda oluşturur</div></div>
   <div class="flow-arr"><i class="ti ti-arrow-right"></i></div>
   <div class="flow-step"><div class="flow-circle" style="background:#D4537E">E</div><div class="flow-lbl" id="t-flow-e">Ekip yapar</div></div>
@@ -517,10 +631,20 @@ function goPage(id,btn){
 /* ROL */
 function setRol(rol,el){
   document.querySelectorAll('.rol-item').forEach(function(r){r.classList.remove('on')});
-  el.classList.add('on');
+  if(el) el.classList.add('on');
   document.getElementById('rol-menu').classList.remove('open');
   var rolAv={'yonetici':'UF','ceyda':'CY','serdar':'SE','ekip':'ET','tuana':'TU','musteri':'BG'};
   document.getElementById('av-btn').childNodes[0].textContent=rolAv[rol]||'UF';
+  if(rol==='musteri'){
+    document.getElementById('ideio-social-overlay').style.display='flex';
+    document.getElementById('main-nav').style.display='none';
+    document.getElementById('flow-bar-wrap').style.display='none';
+  } else {
+    document.getElementById('ideio-social-overlay').style.display='none';
+    document.getElementById('main-nav').style.display='flex';
+    document.getElementById('flow-bar-wrap').style.display='flex';
+    goPage('dashboard',document.querySelector('.nav-btn'));
+  }
 }
 
 /* FORM */
@@ -614,8 +738,43 @@ function gonderRevize(){
   document.getElementById('onay-detail-wrap').style.display='none';
 }
 
+/* IDEIO SOCIAL */
+var socialContents=[
+  {title:'Çırak - Kalfa - Usta',caption:'Bilişim dünyasında uzmanlığa giden yol sabır ve pratikle inşa ediliyor! Çıraklıktan ustalığa uzanan bu kademeli eğitim modelimizle çocuklarımız temelden zirveye adım adım yetkinlik kazanarak geleceğe hazırlanıyor.',hashtags:'#TeknolojiEğitimi #GelişimYolculuğu #GeleceğinMucitleri #Kodlama',date:'Paylaşım: 28 Mayıs 2026',bg:'#1C1C2E',txt:'ÇIRAK\nKALFA\nUSTA'},
+  {title:'LMS Sistemi',caption:'Her alanda gelişimi hisset! LMS sistemimizle öğrenme deneyimini bir üst seviyeye taşı.',hashtags:'#LMS #EğitimTeknolojisi #DigitalLearning',date:'Paylaşım: 30 Mayıs 2026',bg:'#0f2027',txt:'LMS\nSistemi'},
+  {title:'Siyah ACT 300',caption:'ACT 300 ile sınırları zorla! Yeni nesil teknoloji eğitiminde bir adım öne geç.',hashtags:'#ACT300 #Teknoloji #BilişimGarajı',date:'Paylaşım: 15 Mayıs 2026',bg:'#1a1a2e',txt:'SI\nYAH\nACT 300'}
+];
+var selSocial=0;
+function showSocialDetail(idx){
+  selSocial=idx;
+  var c=socialContents[idx];
+  document.getElementById('social-thumb-area').style.background=c.bg;
+  document.getElementById('social-thumb-txt').innerHTML=c.txt.replace(/\n/g,'<br>');
+  document.getElementById('social-caption').textContent=c.caption;
+  document.getElementById('social-hashtags').textContent=c.hashtags;
+  document.getElementById('social-date').textContent=c.date;
+  document.getElementById('social-actions').style.display='grid';
+  document.getElementById('social-revize-box').style.display='none';
+  document.getElementById('social-detail-wrap').style.display='block';
+  document.getElementById('social-detail-wrap').scrollIntoView({behavior:'smooth'});
+}
+function socialRevize(){
+  var b=document.getElementById('social-revize-box');
+  b.style.display=b.style.display==='none'?'block':'none';
+}
+function socialOnayla(){
+  var tag=document.getElementById('ss-tag'+selSocial);
+  if(tag){tag.textContent='Onaylandı';tag.style.background='rgba(34,197,94,.25)';tag.style.color='#16a34a';}
+  document.getElementById('social-actions').style.display='none';
+  document.getElementById('social-detail-wrap').style.display='none';
+}
+function socialRevizeGonder(){
+  var tag=document.getElementById('ss-tag'+selSocial);
+  if(tag){tag.textContent='Revize İstendi';tag.style.background='rgba(239,68,68,.25)';tag.style.color='#dc2626';}
+  document.getElementById('social-revize-box').style.display='none';
+  document.getElementById('social-detail-wrap').style.display='none';
+}
 renderCal();
 </script>
 </body>
 </html>
- 
