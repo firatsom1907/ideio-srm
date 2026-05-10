@@ -7,11 +7,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#f5f5f5;--bg2:#ffffff;--bg3:#ebebeb;--border:#e0e0e0;--text:#111;--text2:#666;--text3:#aaa;--purple:#534AB7;--green:#3B6D11;--red:#A32D2D;--amber:#854F0B;--green-bg:#EAF3DE;--red-bg:#FCEBEB;--amber-bg:#FAEEDA;--purple-bg:#EEEDFE}
-.dark{--bg:#0f0f0f;--bg2:#1a1a1a;--bg3:#242424;--border:#2e2e2e;--text:#fff;--text2:#999;--text3:#555;--purple:#7c6ff7;--green:#22c55e;--red:#ef4444;--amber:#f59e0b;--green-bg:rgba(34,197,94,.1);--red-bg:rgba(239,68,68,.1);--amber-bg:rgba(245,158,11,.1);--purple-bg:rgba(124,111,247,.1)}
+:root{--bg:#f5f5f5;--bg2:#fff;--bg3:#ebebeb;--border:#e0e0e0;--text:#111;--text2:#666;--text3:#aaa;--purple:#534AB7;--green:#3B6D11;--red:#A32D2D;--amber:#854F0B;--gbg:#EAF3DE;--rbg:#FCEBEB;--abg:#FAEEDA;--pbg:#EEEDFE}
+.dark{--bg:#0f0f0f;--bg2:#1a1a1a;--bg3:#242424;--border:#2e2e2e;--text:#fff;--text2:#999;--text3:#555;--purple:#7c6ff7;--green:#22c55e;--red:#ef4444;--amber:#f59e0b;--gbg:rgba(34,197,94,.1);--rbg:rgba(239,68,68,.1);--abg:rgba(245,158,11,.1);--pbg:rgba(124,111,247,.1)}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background .2s,color .2s}
 .page{display:none}.page.active{display:block}
-/* TOPBAR */
 .topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
 .logo{display:flex;align-items:center;gap:8px}
 .logo-box{width:32px;height:32px;background:var(--purple);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700}
@@ -21,32 +20,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .lang-row{display:flex;gap:3px}
 .lang-btn{padding:4px 9px;border-radius:20px;border:1px solid var(--border);background:var(--bg3);font-size:11px;color:var(--text2);cursor:pointer;font-weight:500}
 .lang-btn.on{background:var(--purple);color:#fff;border-color:var(--purple)}
-.av{width:32px;height:32px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;cursor:pointer;position:relative}
-.notif-dot{position:absolute;top:-1px;right:-1px;width:8px;height:8px;border-radius:50%;background:#ef4444;border:2px solid var(--bg2)}
-/* ROL MENU */
-.rol-menu{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:8px;position:absolute;top:52px;right:16px;z-index:200;min-width:180px;display:none}
-.rol-menu.open{display:block}
-.rol-item{padding:10px 12px;border-radius:10px;cursor:pointer;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text)}
-.rol-item:hover{background:var(--bg3)}
-.rol-item.on{background:var(--purple-bg);color:var(--purple);font-weight:600}
-.rol-av{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700;flex-shrink:0}
-/* NAV */
+.av{width:32px;height:32px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700;cursor:pointer}
 .nav-scroll{display:flex;gap:4px;padding:10px 16px;background:var(--bg2);border-bottom:1px solid var(--border);overflow-x:auto}
 .nav-scroll::-webkit-scrollbar{display:none}
 .nav-btn{display:flex;align-items:center;gap:5px;padding:7px 12px;border-radius:9px;border:1px solid var(--border);background:var(--bg2);font-size:12px;color:var(--text2);white-space:nowrap;cursor:pointer;transition:all .15s}
 .nav-btn:hover{background:var(--bg3);color:var(--text)}
-.nav-btn.active{background:var(--purple-bg);color:var(--purple);border-color:var(--purple);font-weight:600}
+.nav-btn.active{background:var(--pbg);color:var(--purple);border-color:var(--purple);font-weight:600}
 .nbadge{background:#ef4444;color:#fff;font-size:9px;padding:1px 5px;border-radius:8px;margin-left:2px}
-/* CONTENT */
-.content{padding:16px;max-width:800px;margin:0 auto}
-.section-gap{display:flex;flex-direction:column;gap:14px}
+.content{padding:16px;max-width:900px;margin:0 auto}
+.sg{display:flex;flex-direction:column;gap:14px}
 .greeting{font-size:20px;font-weight:700;color:var(--text)}
 .sub{font-size:13px;color:var(--text2);margin-top:3px}
-/* CARDS */
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:14px}
 .card-hdr{padding:14px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
 .card-title{font-size:14px;font-weight:700;color:var(--text)}
-.card-sub{font-size:12px;color:var(--text2)}
 .row{padding:13px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .1s}
 .row:last-child{border-bottom:none}
 .row:hover{background:var(--bg3)}
@@ -54,45 +41,37 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .row-name{font-size:13px;font-weight:500;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .row-meta{font-size:11px;color:var(--text2);margin-top:2px}
 .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-/* BADGES */
 .badge{padding:3px 9px;border-radius:7px;font-size:11px;font-weight:600;flex-shrink:0;white-space:nowrap}
-.b-red{background:var(--red-bg);color:var(--red)}
-.b-amber{background:var(--amber-bg);color:var(--amber)}
-.b-green{background:var(--green-bg);color:var(--green)}
-.b-purple{background:var(--purple-bg);color:var(--purple)}
+.b-red{background:var(--rbg);color:var(--red)}
+.b-amber{background:var(--abg);color:var(--amber)}
+.b-green{background:var(--gbg);color:var(--green)}
+.b-purple{background:var(--pbg);color:var(--purple)}
 .b-gray{background:var(--bg3);color:var(--text2)}
-/* STATS */
 .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}
 .stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:12px}
 .stat-icon{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.si-p{background:var(--purple-bg);color:var(--purple)}
-.si-g{background:var(--green-bg);color:var(--green)}
-.si-a{background:var(--amber-bg);color:var(--amber)}
-.si-r{background:var(--red-bg);color:var(--red)}
+.si-p{background:var(--pbg);color:var(--purple)}
+.si-g{background:var(--gbg);color:var(--green)}
+.si-a{background:var(--abg);color:var(--amber)}
+.si-r{background:var(--rbg);color:var(--red)}
 .stat-val{font-size:24px;font-weight:700;color:var(--text)}
 .stat-lbl{font-size:11px;color:var(--text2);margin-top:2px}
-/* BUTTONS */
 .big-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px;border-radius:13px;background:var(--purple);color:#fff;font-size:14px;font-weight:700;border:none;cursor:pointer;width:100%;margin-bottom:14px}
 .big-btn:hover{opacity:.9}
-.outline-btn{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px;border-radius:11px;background:var(--bg2);color:var(--purple);font-size:13px;font-weight:600;border:1px solid var(--purple);cursor:pointer;width:100%}
-/* EKIP */
 .ekip-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
-.ekip-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:13px;cursor:pointer;transition:border-color .15s}
-.ekip-card:hover{border-color:var(--purple)}
+.ekip-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:13px}
 .ekip-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700;margin-bottom:8px}
 .ekip-name{font-size:12px;font-weight:600;color:var(--text);margin-bottom:2px}
 .ekip-role{font-size:10px;color:var(--text2);margin-bottom:8px}
 .load-bar{height:4px;border-radius:2px;background:var(--bg3);overflow:hidden}
 .load-fill{height:100%;border-radius:2px}
 .load-count{font-size:10px;color:var(--text2);margin-top:4px}
-/* AKIŞ */
 .flow-bar{display:flex;align-items:center;gap:0;padding:12px 16px;background:var(--bg2);border-bottom:1px solid var(--border);overflow-x:auto}
 .flow-bar::-webkit-scrollbar{display:none}
 .flow-step{display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0}
 .flow-circle{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff}
 .flow-lbl{font-size:9px;color:var(--text2);text-align:center;max-width:44px;line-height:1.3}
 .flow-arr{color:var(--text3);font-size:12px;margin:0 3px;margin-bottom:14px;flex-shrink:0}
-/* TAKVİM */
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
 .dow{font-size:10px;color:var(--text3);text-align:center;padding:5px 0;font-weight:600}
 .day-cell{min-height:60px;border-radius:9px;padding:5px;background:var(--bg2);border:1px solid var(--border);cursor:pointer;transition:border-color .15s}
@@ -102,26 +81,23 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .day-num{font-size:11px;font-weight:600;text-align:right;color:var(--text2)}
 .day-cell.today .day-num{color:var(--purple)}
 .ev-dot{height:4px;border-radius:2px;margin-top:3px}
-/* MÜŞTERİ */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .content-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;transition:border-color .15s}
 .content-card:hover{border-color:var(--purple)}
 .card-thumb{aspect-ratio:9/16;background:var(--bg3);display:flex;align-items:center;justify-content:center;position:relative}
-.card-status-tag{position:absolute;top:6px;left:6px;padding:3px 7px;border-radius:6px;font-size:9px;font-weight:700}
-.cst-bekliyor{background:rgba(245,158,11,.25);color:#d97706}
+.cst{position:absolute;top:6px;left:6px;padding:3px 7px;border-radius:6px;font-size:9px;font-weight:700}
+.cst-bek{background:rgba(245,158,11,.25);color:#d97706}
 .cst-onay{background:rgba(34,197,94,.25);color:#16a34a}
-.cst-revize{background:rgba(239,68,68,.25);color:#dc2626}
+.cst-rev{background:rgba(239,68,68,.25);color:#dc2626}
 .card-foot{padding:8px 10px}
 .card-foot-name{font-size:11px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card-foot-date{font-size:10px;color:var(--text2);margin-top:2px}
-/* ONAY */
-.onay-actions{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)}
+.onay-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)}
 .onay-btn{padding:14px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:700;cursor:pointer;border:none;background:none;transition:background .15s}
-.ob-revize{color:var(--red);border-right:1px solid var(--border)}
-.ob-revize:hover{background:var(--red-bg)}
-.ob-onayla{color:var(--green)}
-.ob-onayla:hover{background:var(--green-bg)}
-/* FORM */
+.ob-rev{color:var(--red);border-right:1px solid var(--border)}
+.ob-rev:hover{background:var(--rbg)}
+.ob-ok{color:var(--green)}
+.ob-ok:hover{background:var(--gbg)}
 .form-field{margin-bottom:12px}
 .form-label{font-size:11px;color:var(--text2);margin-bottom:5px;font-weight:600;display:block}
 .form-input{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;font-size:13px;background:var(--bg2);color:var(--text);font-family:inherit;outline:none;transition:border-color .15s}
@@ -129,39 +105,73 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .form-select{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;font-size:13px;background:var(--bg2);color:var(--text);font-family:inherit;outline:none;cursor:pointer}
 .type-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .type-opt{border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center;cursor:pointer;font-size:12px;color:var(--text2);font-weight:500;transition:all .15s}
-.type-opt.on{border-color:var(--purple);background:var(--purple-bg);color:var(--purple);font-weight:700}
-.atama-list{display:flex;flex-direction:column;gap:6px}
-.atama-opt{border:1px solid var(--border);border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:all .15s}
-.atama-opt.on{border-color:var(--purple);background:var(--purple-bg)}
+.type-opt.on{border-color:var(--purple);background:var(--pbg);color:var(--purple);font-weight:700}
+.atama-opt{border:1px solid var(--border);border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:all .15s;margin-bottom:6px}
+.atama-opt.on{border-color:var(--purple);background:var(--pbg)}
 .atama-av{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700;flex-shrink:0}
 .atama-name{font-size:12px;font-weight:600;color:var(--text)}
 .atama-meta{font-size:10px;color:var(--text2)}
 .atama-opt.on .atama-name,.atama-opt.on .atama-meta{color:var(--purple)}
 .date-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-/* PAYLAŞIM TAKVİM ROWS */
 .takvim-row{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
 .takvim-row:last-child{border-bottom:none}
-.takvim-date{width:38px;height:38px;border-radius:10px;background:var(--purple-bg);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
+.takvim-date{width:38px;height:38px;border-radius:10px;background:var(--pbg);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0}
 .t-gun{font-size:15px;font-weight:700;color:var(--purple);line-height:1}
 .t-ay{font-size:9px;color:var(--purple);font-weight:600}
-/* BACK */
 .back-btn{display:flex;align-items:center;gap:4px;font-size:12px;color:var(--purple);border:none;background:none;cursor:pointer;padding:0;font-weight:600;margin-bottom:12px}
-/* SERDAR ONAY */
-.serdar-media{background:var(--bg3);display:flex;align-items:center;justify-content:center;padding:24px;min-height:180px}
-.serdar-thumb{width:120px;aspect-ratio:9/16;background:var(--bg2);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid var(--border)}
-.revize-area{padding:14px 16px;border-top:1px solid var(--border)}
-.revize-ta{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;font-size:12px;background:var(--bg2);color:var(--text);font-family:inherit;resize:none;min-height:70px;outline:none;margin-top:6px}
-.revize-ta:focus{border-color:var(--purple)}
-.send-btn{background:var(--purple);color:#fff;border:none;border-radius:10px;padding:11px 16px;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:6px;margin-top:8px;width:100%;justify-content:center}
+/* LOGIN */
+.login-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;background:var(--bg)}
+.login-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:32px 28px;width:100%;max-width:380px}
+.login-logo{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:24px}
+.login-logo-box{width:42px;height:42px;background:var(--purple);border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:700}
+.login-logo-txt{font-size:18px;font-weight:700;color:var(--text)}
+.login-title{font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px;text-align:center}
+.login-sub{font-size:12px;color:var(--text2);text-align:center;margin-bottom:24px}
+.login-btn{background:var(--purple);color:#fff;border:none;border-radius:11px;padding:13px;font-size:14px;font-weight:700;cursor:pointer;width:100%;margin-top:8px}
+.login-btn:hover{opacity:.9}
+.login-err{background:var(--rbg);border:1px solid #F7C1C1;border-radius:9px;padding:10px 12px;font-size:12px;color:var(--red);text-align:center;margin-top:10px;display:none}
+.logout-btn{display:flex;align-items:center;gap:5px;padding:6px 12px;border-radius:8px;border:1px solid var(--border);background:var(--bg3);font-size:11px;color:var(--text2);cursor:pointer}
+/* MUSTERI SOCIAL */
+.social-wrap{min-height:100vh;background:var(--bg);display:flex;flex-direction:column}
+.social-topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.period-scroll{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}
+.period-scroll::-webkit-scrollbar{display:none}
+.period{padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:var(--bg3);color:var(--text2);cursor:pointer;white-space:nowrap;flex-shrink:0}
+.period.on{background:var(--purple);color:#fff;border-color:var(--purple)}
 </style>
 </head>
 <body>
 
+<!-- LOGIN EKRANI -->
+<div id="login-page" class="login-wrap">
+  <div class="login-card">
+    <div class="login-logo">
+      <div class="login-logo-box">IC</div>
+      <span class="login-logo-txt">IDEIO Creative</span>
+    </div>
+    <div class="login-title">Hoş geldiniz</div>
+    <div class="login-sub">Devam etmek için giriş yapın</div>
+    <div class="form-field">
+      <label class="form-label">Kullanıcı adı</label>
+      <input type="text" class="form-input" id="login-user" placeholder="kullanıcı adınız" autocomplete="username">
+    </div>
+    <div class="form-field" style="margin-bottom:0">
+      <label class="form-label">Şifre</label>
+      <input type="password" class="form-input" id="login-pass" placeholder="••••••••" autocomplete="current-password">
+    </div>
+    <button class="login-btn" onclick="doLogin()">Giriş Yap</button>
+    <div class="login-err" id="login-err">Kullanıcı adı veya şifre hatalı</div>
+  </div>
+</div>
+
+<!-- ANA SİSTEM -->
+<div id="main-system" style="display:none">
+
 <!-- TOPBAR -->
-<div class="topbar">
+<div class="topbar" id="sys-topbar">
   <div class="logo">
     <div class="logo-box">IC</div>
-    <span class="logo-txt" id="t-logo">IDEIO Creative</span>
+    <span class="logo-txt">IDEIO Creative</span>
   </div>
   <div class="topbar-right">
     <div class="lang-row">
@@ -169,281 +179,129 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="lang-btn" onclick="setLang('en',this)">EN</div>
     </div>
     <div class="icon-btn" onclick="toggleTheme()" id="theme-btn"><i class="ti ti-moon" style="font-size:15px"></i></div>
-    <div class="av" onclick="toggleRolMenu()" id="av-btn">UF<div class="notif-dot"></div></div>
-  </div>
-</div>
-
-<!-- ROL MENU -->
-<div class="rol-menu" id="rol-menu">
-  <div class="rol-item on" onclick="setRol('yonetici',this)"><div class="rol-av" style="background:#534AB7">UF</div><div><div style="font-size:12px;font-weight:700" id="t-rm-yonetici">Yönetici</div><div style="font-size:10px;color:var(--text2)">Uğur Fırat SOM</div></div></div>
-  <div class="rol-item" onclick="setRol('ceyda',this)"><div class="rol-av" style="background:#1D9E75">CY</div><div><div style="font-size:12px;font-weight:700">Ceyda</div><div style="font-size:10px;color:var(--text2)" id="t-rm-danisma">İletişim Danışmanı</div></div></div>
-  <div class="rol-item" onclick="setRol('serdar',this)"><div class="rol-av" style="background:#D85A30">SE</div><div><div style="font-size:12px;font-weight:700">Serdar</div><div style="font-size:10px;color:var(--text2)" id="t-rm-koord">Koordinatör</div></div></div>
-  <div class="rol-item" onclick="setRol('ekip',this)"><div class="rol-av" style="background:#D4537E">ET</div><div><div style="font-size:12px;font-weight:700" id="t-rm-ekip">Ekip</div><div style="font-size:10px;color:var(--text2)">EdaNur Teymen</div></div></div>
-  <div class="rol-item" onclick="setRol('tuana',this)"><div class="rol-av" style="background:#7c3aed">TU</div><div><div style="font-size:12px;font-weight:700">Tuana</div><div style="font-size:10px;color:var(--text2)" id="t-rm-sosyal">Sosyal Medya</div></div></div>
-  <div class="rol-item" onclick="setRol('musteri',this)"><div class="rol-av" style="background:#0369a1">BG</div><div><div style="font-size:12px;font-weight:700" id="t-rm-musteri">Müşteri</div><div style="font-size:10px;color:var(--text2)">Bilişim Garajı</div></div></div>
-</div>
-
-<!-- İDEIO SOCIAL OVERLAY -->
-<div id="ideio-social-overlay" style="display:none;flex-direction:column;min-height:100vh;background:var(--bg)">
-  <div style="background:var(--bg2);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;align-items:center;justify-content:space-between">
-    <div style="display:flex;align-items:center;gap:8px">
-      <div style="width:30px;height:30px;background:var(--purple);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700">IC</div>
-      <span style="font-size:13px;font-weight:700;color:var(--text)">ideio social</span>
-    </div>
-    <div style="display:flex;align-items:center;gap:8px">
-      <div class="lang-row">
-        <div class="lang-btn on" onclick="setLang('tr',this)">TR</div>
-        <div class="lang-btn" onclick="setLang('en',this)">EN</div>
-      </div>
-      <div class="icon-btn" onclick="toggleTheme()"><i class="ti ti-moon" style="font-size:15px"></i></div>
-      <div style="width:30px;height:30px;border-radius:50%;background:#0369a1;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700;cursor:pointer" onclick="setRol('yonetici',document.querySelector('.rol-item'))">BG</div>
-    </div>
-  </div>
-  <div style="padding:16px;max-width:800px;margin:0 auto;width:100%;display:flex;flex-direction:column;gap:14px">
-    <div style="display:flex;align-items:center;gap:10px">
-      <div style="width:44px;height:44px;border-radius:12px;background:var(--purple-bg);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--purple)">BG</div>
-      <div>
-        <div style="font-size:16px;font-weight:700;color:var(--text)">bilişim_garajı</div>
-        <div style="font-size:12px;color:var(--text2)">7.685 takipçi · 3 onay bekliyor</div>
-      </div>
-    </div>
-    <div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:2px">
-      <div class="period on" style="padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--purple);background:var(--purple);color:#fff;cursor:pointer;white-space:nowrap;flex-shrink:0">Tümü</div>
-      <div class="period" style="padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:var(--bg3);color:var(--text2);cursor:pointer;white-space:nowrap;flex-shrink:0">1 Oca — 31 Oca</div>
-      <div class="period" style="padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:var(--bg3);color:var(--text2);cursor:pointer;white-space:nowrap;flex-shrink:0">1 Şub — 28 Şub</div>
-      <div class="period" style="padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:var(--bg3);color:var(--text2);cursor:pointer;white-space:nowrap;flex-shrink:0">1 Mar — 31 Mar</div>
-      <div class="period" style="padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:var(--bg3);color:var(--text2);cursor:pointer;white-space:nowrap;flex-shrink:0">1 Nis — 30 Nis</div>
-      <div class="period" style="padding:5px 12px;border-radius:20px;font-size:11px;border:1px solid var(--purple);background:var(--purple);color:#fff;cursor:pointer;white-space:nowrap;flex-shrink:0">1 May — 31 May</div>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center"><div style="font-size:18px;font-weight:700;color:var(--amber)">3</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Onay bekliyor</div></div>
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center"><div style="font-size:18px;font-weight:700;color:var(--green)">8</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Onaylandı</div></div>
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center"><div style="font-size:18px;font-weight:700;color:var(--purple)">11</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Toplam</div></div>
-    </div>
-    <div style="font-size:12px;font-weight:700;color:var(--text2)">İçerikler — Mayıs 2026 <span style="color:var(--amber);font-weight:500;font-size:11px">· 3 onay bekliyor</span></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer" onclick="showSocialDetail(0)">
-        <div style="aspect-ratio:9/16;background:#1C1C2E;display:flex;align-items:center;justify-content:center;position:relative;padding:10px">
-          <div style="text-align:center"><div style="font-size:16px;font-weight:900;color:#fff;line-height:1.2">ÇIRAK<br>KALFA<br>USTA</div><div style="font-size:8px;color:rgba(255,255,255,.4);margin-top:6px">bilişim_garajı</div></div>
-          <div style="position:absolute;top:6px;left:6px;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;background:rgba(245,158,11,.25);color:#d97706" id="ss-tag0">Onay Bekliyor</div>
-        </div>
-        <div style="padding:8px 10px"><div style="font-size:11px;font-weight:600;color:var(--text)">Çırak - Kalfa - Usta</div><div style="font-size:10px;color:var(--text2);margin-top:2px">28 Mayıs 2026</div></div>
-      </div>
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer" onclick="showSocialDetail(1)">
-        <div style="aspect-ratio:9/16;background:#0f2027;display:flex;align-items:center;justify-content:center;position:relative">
-          <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center"><i class="ti ti-player-play" style="font-size:16px;color:#fff"></i></div><div style="font-size:9px;color:rgba(255,255,255,.5)">LMS Sistemi</div></div>
-          <div style="position:absolute;top:6px;left:6px;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;background:rgba(245,158,11,.25);color:#d97706" id="ss-tag1">Onay Bekliyor</div>
-        </div>
-        <div style="padding:8px 10px"><div style="font-size:11px;font-weight:600;color:var(--text)">LMS sistemi tanıtım</div><div style="font-size:10px;color:var(--text2);margin-top:2px">30 Mayıs 2026</div></div>
-      </div>
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer" onclick="showSocialDetail(2)">
-        <div style="aspect-ratio:9/16;background:#1a1a2e;display:flex;align-items:center;justify-content:center;position:relative;padding:10px">
-          <div style="text-align:center"><div style="font-size:20px;font-weight:900;color:#fff;line-height:1.1">SI<br>YAH</div><div style="font-size:12px;font-weight:700;color:#fff">ACT 300</div></div>
-          <div style="position:absolute;top:6px;left:6px;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;background:rgba(245,158,11,.25);color:#d97706" id="ss-tag2">Onay Bekliyor</div>
-        </div>
-        <div style="padding:8px 10px"><div style="font-size:11px;font-weight:600;color:var(--text)">Siyah ACT 300</div><div style="font-size:10px;color:var(--text2);margin-top:2px">15 Mayıs 2026</div></div>
-      </div>
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer">
-        <div style="aspect-ratio:9/16;background:#dc2626;display:flex;align-items:center;justify-content:center;position:relative;padding:10px">
-          <div style="text-align:center"><div style="font-size:18px;font-weight:900;color:#fff;line-height:1.1">KIR<br>MIZI<br>ACT</div></div>
-          <div style="position:absolute;top:6px;left:6px;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;background:rgba(34,197,94,.25);color:#16a34a">Paylaşıldı</div>
-        </div>
-        <div style="padding:8px 10px"><div style="font-size:11px;font-weight:600;color:var(--text)">Kırmızı ACT 200</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Paylaşıldı: 1 Mayıs</div></div>
-      </div>
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer">
-        <div style="aspect-ratio:9/16;background:#065f46;display:flex;align-items:center;justify-content:center;position:relative">
-          <div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center"><i class="ti ti-player-play" style="font-size:16px;color:#fff"></i></div><div style="font-size:9px;color:rgba(255,255,255,.5);text-align:center">Hayallerine yaklaş</div></div>
-          <div style="position:absolute;top:6px;left:6px;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;background:rgba(34,197,94,.25);color:#16a34a">Paylaşıldı</div>
-        </div>
-        <div style="padding:8px 10px"><div style="font-size:11px;font-weight:600;color:var(--text)">Hayallerine yaklaş</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Paylaşıldı: 4 Mayıs</div></div>
-      </div>
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer">
-        <div style="aspect-ratio:9/16;background:#1e3a5f;display:flex;align-items:center;justify-content:center;position:relative;padding:10px">
-          <div style="font-size:11px;font-weight:700;color:#fff;text-align:center;line-height:1.3">Her bağlantı<br>bir mantık kurar</div>
-          <div style="position:absolute;top:6px;left:6px;padding:3px 8px;border-radius:6px;font-size:9px;font-weight:700;background:rgba(34,197,94,.25);color:#16a34a">Paylaşıldı</div>
-        </div>
-        <div style="padding:8px 10px"><div style="font-size:11px;font-weight:600;color:var(--text)">Her bağlantı bir mantık</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Paylaşıldı: 7 Mayıs</div></div>
-      </div>
-    </div>
-    <div id="social-detail-wrap" style="display:none">
-      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden">
-        <div style="background:var(--bg3);display:flex;align-items:center;justify-content:center;padding:24px;min-height:180px">
-          <div style="width:120px;aspect-ratio:9/16;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px" id="social-thumb-area">
-            <div style="font-size:12px;font-weight:900;color:#fff;text-align:center;line-height:1.2" id="social-thumb-txt">İçerik</div>
-          </div>
-        </div>
-        <div style="padding:14px 16px;border-bottom:1px solid var(--border)">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-            <div style="width:30px;height:30px;border-radius:50%;background:var(--purple-bg);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--purple)">BG</div>
-            <div><div style="font-size:12px;font-weight:700;color:var(--text)">bilişim_garajı</div><div style="font-size:10px;color:var(--text2)">7.685 takipçi</div></div>
-          </div>
-          <div style="font-size:12px;color:var(--text);line-height:1.6" id="social-caption">Açıklama...</div>
-          <div style="font-size:11px;color:var(--purple);margin-top:6px" id="social-hashtags">#hashtag</div>
-          <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">
-            <i class="ti ti-calendar" style="font-size:13px"></i><span id="social-date">Tarih</span>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)" id="social-actions">
-          <button onclick="socialRevize()" style="padding:14px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:700;cursor:pointer;border:none;background:none;color:var(--red);border-right:1px solid var(--border)"><i class="ti ti-refresh" style="font-size:15px"></i>Revize</button>
-          <button onclick="socialOnayla()" style="padding:14px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:700;cursor:pointer;border:none;background:none;color:var(--green)"><i class="ti ti-check" style="font-size:15px"></i>Onayla</button>
-        </div>
-        <div id="social-revize-box" style="display:none;padding:14px 16px;border-top:1px solid var(--border)">
-          <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:6px">Revize notunuzu yazın</div>
-          <textarea style="width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:10px;font-size:12px;background:var(--bg2);color:var(--text);font-family:inherit;resize:none;min-height:70px;outline:none" placeholder="Nelerin değişmesini istiyorsunuz?"></textarea>
-          <button onclick="socialRevizeGonder()" style="background:var(--purple);color:#fff;border:none;border-radius:10px;padding:11px 16px;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:6px;margin-top:8px;width:100%;justify-content:center"><i class="ti ti-send" style="font-size:14px"></i>Gönder</button>
-        </div>
-      </div>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div class="av" id="user-av">UF</div>
+      <button class="logout-btn" onclick="doLogout()"><i class="ti ti-logout" style="font-size:13px"></i>Çıkış</button>
     </div>
   </div>
 </div>
 
-<!-- AKIŞ ÇUBUĞU -->
-<div class="flow-bar" id="flow-bar-wrap">
-  <div class="flow-step"><div class="flow-circle" style="background:#1D9E75">C</div><div class="flow-lbl" id="t-flow-c">Ceyda oluşturur</div></div>
+<!-- AKIŞ (sadece yönetici görür) -->
+<div class="flow-bar" id="flow-bar">
+  <div class="flow-step"><div class="flow-circle" style="background:#1D9E75">C</div><div class="flow-lbl">Ceyda oluşturur</div></div>
   <div class="flow-arr"><i class="ti ti-arrow-right"></i></div>
-  <div class="flow-step"><div class="flow-circle" style="background:#D4537E">E</div><div class="flow-lbl" id="t-flow-e">Ekip yapar</div></div>
+  <div class="flow-step"><div class="flow-circle" style="background:#D4537E">E</div><div class="flow-lbl">Ekip yapar</div></div>
   <div class="flow-arr"><i class="ti ti-arrow-right"></i></div>
-  <div class="flow-step"><div class="flow-circle" style="background:#D85A30">S</div><div class="flow-lbl" id="t-flow-s">Serdar onaylar</div></div>
+  <div class="flow-step"><div class="flow-circle" style="background:#D85A30">S</div><div class="flow-lbl">Serdar onaylar</div></div>
   <div class="flow-arr"><i class="ti ti-arrow-right"></i></div>
-  <div class="flow-step"><div class="flow-circle" style="background:#854F0B">M</div><div class="flow-lbl" id="t-flow-m">Müşteri onaylar</div></div>
+  <div class="flow-step"><div class="flow-circle" style="background:#854F0B">M</div><div class="flow-lbl">Müşteri onaylar</div></div>
   <div class="flow-arr"><i class="ti ti-arrow-right"></i></div>
-  <div class="flow-step"><div class="flow-circle" style="background:#7c3aed">T</div><div class="flow-lbl" id="t-flow-t">Tuana paylaşır</div></div>
+  <div class="flow-step"><div class="flow-circle" style="background:#7c3aed">T</div><div class="flow-lbl">Tuana paylaşır</div></div>
 </div>
 
 <!-- NAV -->
-<div class="nav-scroll" id="main-nav">
-  <button class="nav-btn active" onclick="goPage('dashboard',this)"><i class="ti ti-layout-dashboard"></i><span id="t-nav-ana">Ana Sayfa</span></button>
-  <button class="nav-btn" onclick="goPage('gorevler',this)"><i class="ti ti-checklist"></i><span id="t-nav-gorev">Görevler</span><span class="nbadge">18</span></button>
-  <button class="nav-btn" onclick="goPage('cekim',this)"><i class="ti ti-camera"></i><span id="t-nav-cekim">Çekim</span></button>
-  <button class="nav-btn" onclick="goPage('paylasim',this)"><i class="ti ti-share"></i><span id="t-nav-paylasim">Paylaşım</span></button>
-  <button class="nav-btn" onclick="goPage('musteriler',this)"><i class="ti ti-users"></i><span id="t-nav-musteriler">Müşteriler</span></button>
-  <button class="nav-btn" onclick="goPage('yonetim',this)"><i class="ti ti-settings"></i><span id="t-nav-yonetim">Yönetim</span></button>
-</div>
+<div class="nav-scroll" id="main-nav"></div>
 
-<!-- DASHBOARD -->
+<!-- SAYFALAR -->
+<div id="pages-wrap">
+
+<!-- YÖNETİCİ DASHBOARD -->
 <div id="page-dashboard" class="page active">
-<div class="content section-gap">
-  <div>
-    <div class="greeting" id="t-greeting">Günaydın, Uğur</div>
-    <div class="sub" id="t-greeting-sub">10 Mayıs 2026 · 392 görev</div>
-  </div>
+<div class="content sg">
+  <div><div class="greeting">Günaydın, Uğur</div><div class="sub">10 Mayıs 2026 · 392 görev</div></div>
   <div class="stats-grid">
-    <div class="stat-card"><div class="stat-icon si-r"><i class="ti ti-clock"></i></div><div><div class="stat-val" style="color:var(--red)">11</div><div class="stat-lbl" id="t-s1">Geciken onay</div></div></div>
-    <div class="stat-card"><div class="stat-icon si-a"><i class="ti ti-eye"></i></div><div><div class="stat-val" style="color:var(--amber)">18</div><div class="stat-lbl" id="t-s2">Serdar'da bekliyor</div></div></div>
-    <div class="stat-card"><div class="stat-icon si-p"><i class="ti ti-rocket"></i></div><div><div class="stat-val" style="color:var(--purple)">118</div><div class="stat-lbl" id="t-s3">Paylaşıma hazır</div></div></div>
-    <div class="stat-card"><div class="stat-icon si-g"><i class="ti ti-send"></i></div><div><div class="stat-val" style="color:var(--green)">51</div><div class="stat-lbl" id="t-s4">Bu ay paylaşıldı</div></div></div>
+    <div class="stat-card"><div class="stat-icon si-r"><i class="ti ti-clock"></i></div><div><div class="stat-val" style="color:var(--red)">11</div><div class="stat-lbl">Geciken onay</div></div></div>
+    <div class="stat-card"><div class="stat-icon si-a"><i class="ti ti-eye"></i></div><div><div class="stat-val" style="color:var(--amber)">18</div><div class="stat-lbl">Serdar'da bekliyor</div></div></div>
+    <div class="stat-card"><div class="stat-icon si-p"><i class="ti ti-rocket"></i></div><div><div class="stat-val" style="color:var(--purple)">118</div><div class="stat-lbl">Paylaşıma hazır</div></div></div>
+    <div class="stat-card"><div class="stat-icon si-g"><i class="ti ti-send"></i></div><div><div class="stat-val" style="color:var(--green)">51</div><div class="stat-lbl">Bu ay paylaşıldı</div></div></div>
   </div>
-  <div>
-    <div style="font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px" id="t-geciken">Geciken müşteri onayları</div>
-    <div class="card">
-      <div class="row"><div class="dot" style="background:#ef4444"></div><div class="row-main"><div class="row-name">SEZİN SİMGE TORAK</div><div class="row-meta" id="t-r1m">5 içerik · 4 gündür bekliyor</div></div><div class="badge b-red" id="t-r1b">4 gün</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-      <div class="row"><div class="dot" style="background:var(--amber)"></div><div class="row-main"><div class="row-name">Gold Performans FUTBOL</div><div class="row-meta" id="t-r2m">3 içerik · 2 gündür bekliyor</div></div><div class="badge b-amber" id="t-r2b">2 gün</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-      <div class="row"><div class="dot" style="background:var(--amber)"></div><div class="row-main"><div class="row-name">VENETİA PİZZA</div><div class="row-meta" id="t-r3m">2 içerik · 1 gündür bekliyor</div></div><div class="badge b-amber" id="t-r3b">1 gün</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-      <div class="row"><div class="dot" style="background:var(--green)"></div><div class="row-main"><div class="row-name">BİLİŞİM GARAJI</div><div class="row-meta" id="t-r4m">1 içerik · bugün gönderildi</div></div><div class="badge b-green" id="t-r4b">Bugün</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-    </div>
+  <div style="font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px">Geciken müşteri onayları</div>
+  <div class="card">
+    <div class="row"><div class="dot" style="background:#ef4444"></div><div class="row-main"><div class="row-name">SEZİN SİMGE TORAK</div><div class="row-meta">5 içerik · 4 gündür bekliyor</div></div><div class="badge b-red">4 gün</div></div>
+    <div class="row"><div class="dot" style="background:var(--amber)"></div><div class="row-main"><div class="row-name">Gold Performans FUTBOL</div><div class="row-meta">3 içerik · 2 gündür bekliyor</div></div><div class="badge b-amber">2 gün</div></div>
+    <div class="row"><div class="dot" style="background:var(--amber)"></div><div class="row-main"><div class="row-name">VENETİA PİZZA</div><div class="row-meta">2 içerik · 1 gündür bekliyor</div></div><div class="badge b-amber">1 gün</div></div>
   </div>
-  <div>
-    <div style="font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px" id="t-ekip-lbl">Ekip yükü — bugün</div>
-    <div class="ekip-grid">
-      <div class="ekip-card"><div class="ekip-av" style="background:#534AB7">CC</div><div class="ekip-name">Can Çolak</div><div class="ekip-role">UX / Video</div><div class="load-bar"><div class="load-fill" style="width:60%;background:#534AB7"></div></div><div class="load-count">6 aktif</div></div>
-      <div class="ekip-card"><div class="ekip-av" style="background:#1D9E75">ET</div><div class="ekip-name">EdaNur Teymen</div><div class="ekip-role" id="t-eda-role">Grafik tasarım</div><div class="load-bar"><div class="load-fill" style="width:90%;background:#ef4444"></div></div><div class="load-count">15 aktif</div></div>
-      <div class="ekip-card"><div class="ekip-av" style="background:#D85A30">ME</div><div class="ekip-name">Mustafa Evren</div><div class="ekip-role" id="t-me-role">Video edit</div><div class="load-bar"><div class="load-fill" style="width:70%;background:var(--amber)"></div></div><div class="load-count">11 aktif</div></div>
-      <div class="ekip-card"><div class="ekip-av" style="background:#D4537E">EF</div><div class="ekip-name">Efe Cansever</div><div class="ekip-role" id="t-ef-role">Videographer</div><div class="load-bar"><div class="load-fill" style="width:40%;background:#534AB7"></div></div><div class="load-count">7 aktif</div></div>
-    </div>
+  <div style="font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px">Ekip yükü — bugün</div>
+  <div class="ekip-grid">
+    <div class="ekip-card"><div class="ekip-av" style="background:#534AB7">CC</div><div class="ekip-name">Can Çolak</div><div class="ekip-role">UX / Video</div><div class="load-bar"><div class="load-fill" style="width:60%;background:#534AB7"></div></div><div class="load-count">6 aktif görev</div></div>
+    <div class="ekip-card"><div class="ekip-av" style="background:#1D9E75">ET</div><div class="ekip-name">EdaNur Teymen</div><div class="ekip-role">Grafik tasarım</div><div class="load-bar"><div class="load-fill" style="width:90%;background:#ef4444"></div></div><div class="load-count">15 aktif görev</div></div>
+    <div class="ekip-card"><div class="ekip-av" style="background:#D85A30">ME</div><div class="ekip-name">Mustafa Evren</div><div class="ekip-role">Video edit</div><div class="load-bar"><div class="load-fill" style="width:70%;background:var(--amber)"></div></div><div class="load-count">11 aktif görev</div></div>
+    <div class="ekip-card"><div class="ekip-av" style="background:#D4537E">EF</div><div class="ekip-name">Efe Cansever</div><div class="ekip-role">Videographer</div><div class="load-bar"><div class="load-fill" style="width:40%;background:#534AB7"></div></div><div class="load-count">7 aktif görev</div></div>
   </div>
 </div>
 </div>
 
-<!-- GÖREVLER -->
+<!-- YÖNETİCİ - GÖREVLER -->
 <div id="page-gorevler" class="page">
-<div class="content section-gap">
+<div class="content sg">
   <div style="display:flex;align-items:center;justify-content:space-between">
-    <div><div class="greeting" id="t-gorev-title">Görevler</div><div class="sub" id="t-gorev-sub">392 görev · Mayıs 2026</div></div>
-    <button class="big-btn" style="width:auto;padding:10px 16px;font-size:13px;margin:0" onclick="goPage('yeni-gorev',null)"><i class="ti ti-plus"></i><span id="t-yeni-btn">Yeni Görev</span></button>
-  </div>
-  <div style="background:var(--green-bg);border:1px solid #C0DD97;border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:8px">
-    <i class="ti ti-circle-check" style="font-size:18px;color:var(--green);flex-shrink:0"></i>
-    <div><div style="font-size:12px;font-weight:700;color:var(--green)" id="t-toast-ok">Görev başarıyla oluşturuldu</div><div style="font-size:11px;color:var(--green)" id="t-toast-sub">BİLİŞİM GARAJI — Yeni reels görevi eklendi</div></div>
+    <div><div class="greeting">Görevler</div><div class="sub">392 görev · Mayıs 2026</div></div>
+    <button class="big-btn" style="width:auto;padding:10px 16px;font-size:13px;margin:0" onclick="goPage('yeni-gorev')"><i class="ti ti-plus"></i>Yeni Görev</button>
   </div>
   <div class="card">
-    <div class="card-hdr"><span class="card-title" id="t-onay-bekliyor">Serdar'da bekliyor</span><span class="badge b-amber">18</span></div>
-    <div class="row"><div class="dot" style="background:#534AB7"></div><div class="row-main"><div class="row-name">Kaplama yapılan diş çürür mü?</div><div class="row-meta">SEZİN SİMGE TORAK · Post · EdaNur</div></div><div class="badge b-amber" id="t-onayda">Onayda</div></div>
-    <div class="row"><div class="dot" style="background:#1D9E75"></div><div class="row-main"><div class="row-name">Gold Performans antrenman serisi</div><div class="row-meta">Gold Performans · Reels · Can</div></div><div class="badge b-amber" id="t-onayda2">Onayda</div></div>
+    <div class="card-hdr"><span class="card-title">Serdar'da bekliyor</span><span class="badge b-amber">18</span></div>
+    <div class="row"><div class="dot" style="background:#534AB7"></div><div class="row-main"><div class="row-name">Kaplama yapılan diş çürür mü?</div><div class="row-meta">SEZİN SİMGE TORAK · Post · EdaNur</div></div><div class="badge b-amber">Onayda</div></div>
+    <div class="row"><div class="dot" style="background:#1D9E75"></div><div class="row-main"><div class="row-name">Gold Performans antrenman serisi</div><div class="row-meta">Gold Performans · Reels · Can</div></div><div class="badge b-amber">Onayda</div></div>
     <div class="row"><div class="dot" style="background:#D85A30"></div><div class="row-main"><div class="row-name">Tabela reels — IDEIO Creative</div><div class="row-meta">IDEIO CREATIVE · Reels · Mustafa</div></div><div class="badge b-amber">Onayda</div></div>
   </div>
   <div class="card">
-    <div class="card-hdr"><span class="card-title" id="t-devam-lbl">Devam eden</span><span class="badge b-purple">96</span></div>
-    <div class="row"><div class="dot" style="background:#ef4444"></div><div class="row-main"><div class="row-name">Diş sıkma baş ağrısına sebep olur</div><div class="row-meta">SEZİN SİMGE TORAK · Post · EdaNur · Bugün bitiyor</div></div><div class="badge b-red" id="t-acil">Acil</div></div>
-    <div class="row"><div class="dot" style="background:var(--amber)"></div><div class="row-main"><div class="row-name">LMS sistemi grafik tasarım</div><div class="row-meta">BİLİŞİM GARAJI · Post · EdaNur · 3 gün kaldı</div></div><div class="badge b-amber" id="t-yakin">Yakın</div></div>
-    <div class="row"><div class="dot" style="background:#534AB7"></div><div class="row-main"><div class="row-name">Ozan çekim düzenlemesi</div><div class="row-meta">BOĞATEPE MANDIRA · Reels · Mustafa · 5 gün kaldı</div></div><div class="badge b-purple" id="t-devam">Devam</div></div>
+    <div class="card-hdr"><span class="card-title">Devam eden</span><span class="badge b-purple">96</span></div>
+    <div class="row"><div class="dot" style="background:#ef4444"></div><div class="row-main"><div class="row-name">Diş sıkma baş ağrısı</div><div class="row-meta">SEZİN SİMGE TORAK · Post · EdaNur · Bugün bitiyor</div></div><div class="badge b-red">Acil</div></div>
+    <div class="row"><div class="dot" style="background:var(--amber)"></div><div class="row-main"><div class="row-name">LMS sistemi grafik</div><div class="row-meta">BİLİŞİM GARAJI · Post · EdaNur · 3 gün kaldı</div></div><div class="badge b-amber">Yakın</div></div>
+    <div class="row"><div class="dot" style="background:#534AB7"></div><div class="row-main"><div class="row-name">Ozan çekim düzenlemesi</div><div class="row-meta">BOĞATEPE MANDIRA · Reels · Mustafa · 5 gün kaldı</div></div><div class="badge b-purple">Devam</div></div>
   </div>
   <div class="card">
-    <div class="card-hdr"><span class="card-title" id="t-paylasim-hazir">Paylaşıma hazır</span><span class="badge b-green">118</span></div>
-    <div class="row"><div class="dot" style="background:var(--green)"></div><div class="row-main"><div class="row-name">Okul dijitale mi? — Reels</div><div class="row-meta">BİLİŞİM GARAJI · Tuana'da</div></div><div class="badge b-green" id="t-hazir">Hazır</div></div>
+    <div class="card-hdr"><span class="card-title">Paylaşıma hazır</span><span class="badge b-green">118</span></div>
+    <div class="row"><div class="dot" style="background:var(--green)"></div><div class="row-main"><div class="row-name">Okul dijitale mi? — Reels</div><div class="row-meta">BİLİŞİM GARAJI · Tuana'da</div></div><div class="badge b-green">Hazır</div></div>
     <div class="row"><div class="dot" style="background:var(--green)"></div><div class="row-main"><div class="row-name">Doğal süt üretim süreci</div><div class="row-meta">BOĞATEPE MANDIRA · Tuana'da</div></div><div class="badge b-green">Hazır</div></div>
   </div>
 </div>
 </div>
 
-<!-- YENİ GÖREV -->
+<!-- YENİ GÖREV (Ceyda + Yönetici) -->
 <div id="page-yeni-gorev" class="page">
-<div class="content section-gap">
-  <button class="back-btn" onclick="goPage('gorevler',null)"><i class="ti ti-arrow-left" style="font-size:15px"></i><span id="t-back">Geri</span></button>
-  <div class="greeting" id="t-yeni-gorev-title">Yeni Görev</div>
+<div class="content sg">
+  <button class="back-btn" onclick="goBack()"><i class="ti ti-arrow-left" style="font-size:15px"></i>Geri</button>
+  <div class="greeting">Yeni Görev</div>
   <div class="card" style="padding:16px">
     <div class="form-field">
-      <label class="form-label" id="t-musteri-lbl">Müşteri</label>
-      <select class="form-select">
-        <option>BİLİŞİM GARAJI</option><option>Gold Performans FUTBOL</option>
-        <option>SEZİN SİMGE TORAK</option><option>VENETİA PİZZA</option>
-        <option>BOĞATEPE MANDIRA</option><option>ESBAY İSG</option>
-        <option>CATCHUPPER</option><option>Berkay Koray Nazlı</option>
-      </select>
+      <label class="form-label">Müşteri</label>
+      <select class="form-select"><option>BİLİŞİM GARAJI</option><option>Gold Performans FUTBOL</option><option>SEZİN SİMGE TORAK</option><option>VENETİA PİZZA</option><option>BOĞATEPE MANDIRA</option><option>ESBAY İSG</option><option>CATCHUPPER</option><option>Berkay Koray Nazlı</option></select>
     </div>
     <div class="form-field">
-      <label class="form-label" id="t-baslik-lbl">Görev başlığı</label>
-      <input type="text" class="form-input" id="t-baslik-ph">
+      <label class="form-label">Görev başlığı</label>
+      <input type="text" class="form-input" placeholder="Ne yapılacak?">
     </div>
     <div class="form-field">
-      <label class="form-label" id="t-tip-lbl">İçerik tipi</label>
+      <label class="form-label">İçerik tipi</label>
       <div class="type-grid">
         <div class="type-opt on" onclick="selType(this)">Post</div>
         <div class="type-opt" onclick="selType(this)">Reels</div>
       </div>
     </div>
     <div class="form-field">
-      <label class="form-label" id="t-ata-lbl">Kime ata</label>
-      <div class="atama-list">
-        <div class="atama-opt on" onclick="selAtama(this)"><div class="atama-av" style="background:#1D9E75">ET</div><div><div class="atama-name">EdaNur Teymen</div><div class="atama-meta" id="t-et-meta">Grafik tasarım · 15 aktif görev</div></div><i class="ti ti-circle-check" style="font-size:18px;color:var(--purple);margin-left:auto"></i></div>
-        <div class="atama-opt" onclick="selAtama(this)"><div class="atama-av" style="background:#534AB7">CC</div><div><div class="atama-name">Can Çolak</div><div class="atama-meta">UX/Video · 6 aktif görev</div></div><i class="ti ti-circle" style="font-size:18px;color:var(--text3);margin-left:auto"></i></div>
-        <div class="atama-opt" onclick="selAtama(this)"><div class="atama-av" style="background:#D85A30">ME</div><div><div class="atama-name">Mustafa Evren</div><div class="atama-meta">Video edit · 11 aktif görev</div></div><i class="ti ti-circle" style="font-size:18px;color:var(--text3);margin-left:auto"></i></div>
-        <div class="atama-opt" onclick="selAtama(this)"><div class="atama-av" style="background:#D4537E">EF</div><div><div class="atama-name">Efe Cansever</div><div class="atama-meta">Videographer · 7 aktif görev</div></div><i class="ti ti-circle" style="font-size:18px;color:var(--text3);margin-left:auto"></i></div>
-        <div class="atama-opt" onclick="selAtama(this)"><div class="atama-av" style="background:#7c3aed">OZ</div><div><div class="atama-name">Ozan Mayasız</div><div class="atama-meta">Videographer · 5 aktif görev</div></div><i class="ti ti-circle" style="font-size:18px;color:var(--text3);margin-left:auto"></i></div>
-      </div>
+      <label class="form-label">Kime ata <span style="color:var(--text3);font-weight:400">(aktif görev sayısı)</span></label>
+      <div class="atama-opt on" onclick="selAtama(this)"><div class="atama-av" style="background:#1D9E75">ET</div><div><div class="atama-name">EdaNur Teymen</div><div class="atama-meta">Grafik tasarım · 15 aktif</div></div><i class="ti ti-circle-check" style="font-size:18px;color:var(--purple);margin-left:auto"></i></div>
+      <div class="atama-opt" onclick="selAtama(this)"><div class="atama-av" style="background:#534AB7">CC</div><div><div class="atama-name">Can Çolak</div><div class="atama-meta">UX/Video · 6 aktif</div></div><i class="ti ti-circle" style="font-size:18px;color:var(--text3);margin-left:auto"></i></div>
+      <div class="atama-opt" onclick="selAtama(this)"><div class="atama-av" style="background:#D85A30">ME</div><div><div class="atama-name">Mustafa Evren</div><div class="atama-meta">Video edit · 11 aktif</div></div><i class="ti ti-circle" style="font-size:18px;color:var(--text3);margin-left:auto"></i></div>
+      <div class="atama-opt" onclick="selAtama(this)"><div class="atama-av" style="background:#D4537E">EF</div><div><div class="atama-name">Efe Cansever</div><div class="atama-meta">Videographer · 7 aktif</div></div><i class="ti ti-circle" style="font-size:18px;color:var(--text3);margin-left:auto"></i></div>
+      <div class="atama-opt" onclick="selAtama(this)"><div class="atama-av" style="background:#7c3aed">OZ</div><div><div class="atama-name">Ozan Mayasız</div><div class="atama-meta">Videographer · 5 aktif</div></div><i class="ti ti-circle" style="font-size:18px;color:var(--text3);margin-left:auto"></i></div>
     </div>
-    <div class="date-row">
-      <div class="form-field" style="margin:0">
-        <label class="form-label" id="t-bitis-lbl">Bitiş tarihi</label>
-        <input type="date" class="form-input" value="2026-05-17">
-      </div>
-      <div class="form-field" style="margin:0">
-        <label class="form-label" id="t-paylasim-lbl">Paylaşım tarihi</label>
-        <input type="date" class="form-input" value="2026-05-20">
-      </div>
+    <div class="date-row" style="margin-bottom:14px">
+      <div><label class="form-label">Bitiş tarihi</label><input type="date" class="form-input" value="2026-05-17"></div>
+      <div><label class="form-label">Paylaşım tarihi</label><input type="date" class="form-input" value="2026-05-20"></div>
     </div>
-    <button class="big-btn" style="margin-top:14px;margin-bottom:0" onclick="goPage('gorevler',null)">
-      <i class="ti ti-send"></i><span id="t-olustur-btn">Görevi Oluştur ve Ata</span>
-    </button>
+    <button class="big-btn" style="margin:0" onclick="goBack()"><i class="ti ti-send"></i>Görevi Oluştur ve Ata</button>
   </div>
 </div>
 </div>
 
 <!-- ÇEKİM TAKVİMİ -->
 <div id="page-cekim" class="page">
-<div class="content section-gap">
+<div class="content sg">
   <div style="display:flex;align-items:center;justify-content:space-between">
-    <div><div class="greeting" id="t-cekim-title">Çekim Takvimi</div><div class="sub" id="t-cekim-sub">Mayıs 2026</div></div>
-    <button class="big-btn" style="width:auto;padding:10px 14px;font-size:12px;margin:0"><i class="ti ti-plus"></i><span id="t-yeni-cekim">Yeni</span></button>
+    <div><div class="greeting">Çekim Takvimi</div><div class="sub">Mayıs 2026</div></div>
+    <button class="big-btn" style="width:auto;padding:10px 14px;font-size:12px;margin:0"><i class="ti ti-plus"></i>Yeni</button>
   </div>
   <div class="card">
     <div class="card-hdr">
@@ -455,8 +313,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     </div>
     <div style="padding:12px">
       <div class="cal-grid" style="margin-bottom:6px">
-        <div class="dow" id="t-pzt">Pzt</div><div class="dow" id="t-sal">Sal</div><div class="dow" id="t-car">Çar</div>
-        <div class="dow" id="t-per">Per</div><div class="dow" id="t-cum">Cum</div><div class="dow" id="t-cmt">Cmt</div><div class="dow" id="t-paz">Paz</div>
+        <div class="dow">Pzt</div><div class="dow">Sal</div><div class="dow">Çar</div><div class="dow">Per</div><div class="dow">Cum</div><div class="dow">Cmt</div><div class="dow">Paz</div>
       </div>
       <div class="cal-grid" id="cal-grid"></div>
     </div>
@@ -467,124 +324,349 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <!-- PAYLAŞIM TAKVİMİ -->
 <div id="page-paylasim" class="page">
-<div class="content section-gap">
-  <div><div class="greeting" id="t-paylasim-title">Paylaşım Takvimi</div><div class="sub" id="t-paylasim-title-sub">Mayıs 2026 · Tuana</div></div>
+<div class="content sg">
+  <div><div class="greeting">Paylaşım Takvimi</div><div class="sub">Mayıs 2026</div></div>
   <div class="stats-grid">
-    <div class="stat-card"><div class="stat-icon si-p"><i class="ti ti-rocket"></i></div><div><div class="stat-val" style="color:var(--purple)">118</div><div class="stat-lbl" id="t-p-hazir">Paylaşıma hazır</div></div></div>
-    <div class="stat-card"><div class="stat-icon si-g"><i class="ti ti-send"></i></div><div><div class="stat-val" style="color:var(--green)">51</div><div class="stat-lbl" id="t-p-paylasild">Paylaşıldı</div></div></div>
+    <div class="stat-card"><div class="stat-icon si-p"><i class="ti ti-rocket"></i></div><div><div class="stat-val" style="color:var(--purple)">118</div><div class="stat-lbl">Paylaşıma hazır</div></div></div>
+    <div class="stat-card"><div class="stat-icon si-g"><i class="ti ti-send"></i></div><div><div class="stat-val" style="color:var(--green)">51</div><div class="stat-lbl">Paylaşıldı</div></div></div>
   </div>
   <div class="card">
-    <div class="card-hdr"><span class="card-title" id="t-bu-hafta">Bu hafta paylaşılacaklar</span></div>
-    <div class="takvim-row"><div class="takvim-date"><div class="t-gun">10</div><div class="t-ay" id="t-may">May</div></div><div class="row-main"><div class="row-name">Gold Performans VOLEYBOL — Reels</div><div class="row-meta">Instagram · 18:00</div></div><div class="badge b-green" id="t-hazir-b">Hazır</div></div>
+    <div class="card-hdr"><span class="card-title">Bu hafta</span></div>
+    <div class="takvim-row"><div class="takvim-date"><div class="t-gun">10</div><div class="t-ay">May</div></div><div class="row-main"><div class="row-name">Gold Performans VOLEYBOL — Reels</div><div class="row-meta">Instagram · 18:00</div></div><div class="badge b-green">Hazır</div></div>
     <div class="takvim-row"><div class="takvim-date"><div class="t-gun">11</div><div class="t-ay">May</div></div><div class="row-main"><div class="row-name">BOĞATEPE MANDIRA — Post</div><div class="row-meta">Instagram · 12:00</div></div><div class="badge b-green">Hazır</div></div>
-    <div class="takvim-row"><div class="takvim-date"><div class="t-gun">12</div><div class="t-ay">May</div></div><div class="row-main"><div class="row-name">ESBAY İSG — Reels</div><div class="row-meta">Instagram · 10:00</div></div><div class="badge b-amber" id="t-onay-bekl">Onay bekl.</div></div>
+    <div class="takvim-row"><div class="takvim-date"><div class="t-gun">12</div><div class="t-ay">May</div></div><div class="row-main"><div class="row-name">ESBAY İSG — Reels</div><div class="row-meta">Instagram · 10:00</div></div><div class="badge b-amber">Onay bekl.</div></div>
     <div class="takvim-row"><div class="takvim-date"><div class="t-gun">13</div><div class="t-ay">May</div></div><div class="row-main"><div class="row-name">BİLİŞİM GARAJI — Post</div><div class="row-meta">Instagram · 14:00</div></div><div class="badge b-green">Hazır</div></div>
-    <div class="takvim-row"><div class="takvim-date"><div class="t-gun">14</div><div class="t-ay">May</div></div><div class="row-main"><div class="row-name">SEZİN SİMGE TORAK — Post</div><div class="row-meta">Instagram · 11:00</div></div><div class="badge b-red" id="t-onay-yok">Onay yok</div></div>
+    <div class="takvim-row"><div class="takvim-date"><div class="t-gun">14</div><div class="t-ay">May</div></div><div class="row-main"><div class="row-name">SEZİN SİMGE TORAK — Post</div><div class="row-meta">Instagram · 11:00</div></div><div class="badge b-red">Onay yok</div></div>
   </div>
 </div>
 </div>
 
-<!-- MÜŞTERİLER -->
+<!-- MÜŞTERİLER (yönetici) -->
 <div id="page-musteriler" class="page">
-<div class="content section-gap">
-  <div><div class="greeting" id="t-must-title">Müşteriler</div><div class="sub" id="t-must-sub">40 müşteri · Mayıs 2026</div></div>
+<div class="content sg">
+  <div><div class="greeting">Müşteriler</div><div class="sub">40 müşteri · Mayıs 2026</div></div>
   <div class="card">
-    <div class="row" onclick="goPage('musteri-onay',null)"><div class="row-main"><div class="row-name">BİLİŞİM GARAJI</div><div class="row-meta">3 onay bekliyor · 8 onaylandı</div></div><div class="badge b-amber">3</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-    <div class="row" onclick="goPage('musteri-onay',null)"><div class="row-main"><div class="row-name">SEZİN SİMGE TORAK</div><div class="row-meta" id="t-m2">5 onay bekliyor · 4 gün gecikti</div></div><div class="badge b-red">5</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-    <div class="row" onclick="goPage('musteri-onay',null)"><div class="row-main"><div class="row-name">Gold Performans FUTBOL</div><div class="row-meta">3 onay bekliyor · 2 gün</div></div><div class="badge b-amber">3</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-    <div class="row" onclick="goPage('musteri-onay',null)"><div class="row-main"><div class="row-name">VENETİA PİZZA</div><div class="row-meta">2 onay bekliyor</div></div><div class="badge b-amber">2</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-    <div class="row"><div class="row-main"><div class="row-name">BOĞATEPE MANDIRA</div><div class="row-meta">Tüm içerikler onaylandı</div></div><div class="badge b-green" id="t-tamam">Tamam</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-    <div class="row"><div class="row-main"><div class="row-name">ESBAY İSG</div><div class="row-meta">1 onay bekliyor</div></div><div class="badge b-amber">1</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-  </div>
-</div>
-</div>
-
-<!-- MÜŞTERİ ONAY EKRANI (ideio social tarzı) -->
-<div id="page-musteri-onay" class="page">
-<div class="content section-gap">
-  <button class="back-btn" onclick="goPage('musteriler',null)"><i class="ti ti-arrow-left" style="font-size:15px"></i><span id="t-back2">Tüm müşteriler</span></button>
-  <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
-    <div style="width:44px;height:44px;border-radius:12px;background:var(--purple-bg);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--purple)">BG</div>
-    <div><div class="greeting" style="font-size:16px">bilişim_garajı</div><div class="sub">7.685 takipçi · 3 onay bekliyor</div></div>
-  </div>
-  <div class="stats-grid">
-    <div class="stat-card"><div class="stat-icon si-a"><i class="ti ti-clock"></i></div><div><div class="stat-val" style="color:var(--amber)">3</div><div class="stat-lbl" id="t-bek-lbl">Onay bekliyor</div></div></div>
-    <div class="stat-card"><div class="stat-icon si-g"><i class="ti ti-check"></i></div><div><div class="stat-val" style="color:var(--green)">8</div><div class="stat-lbl" id="t-onay-lbl">Onaylandı</div></div></div>
-  </div>
-  <div>
-    <div style="font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px" id="t-icerik-lbl">İçerikler — Mayıs 2026</div>
-    <div class="grid-2">
-      <div class="content-card" onclick="showOnayDetail(0)">
-        <div class="card-thumb" style="background:#1C1C2E"><div style="text-align:center;padding:10px"><div style="font-size:14px;font-weight:900;color:#fff;line-height:1.2">ÇIRAK<br>KALFA<br>USTA</div><div style="font-size:8px;color:rgba(255,255,255,.4);margin-top:6px">bilişim_garajı</div></div><div class="card-status-tag cst-bekliyor" id="t-cs0">Onay Bekliyor</div></div>
-        <div class="card-foot"><div class="card-foot-name">Çırak - Kalfa - Usta</div><div class="card-foot-date">28 Mayıs 2026</div></div>
-      </div>
-      <div class="content-card" onclick="showOnayDetail(1)">
-        <div class="card-thumb" style="background:#0f2027"><div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:6px"><div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center"><i class="ti ti-player-play" style="font-size:16px;color:#fff"></i></div><div style="font-size:9px;color:rgba(255,255,255,.5);text-align:center">LMS Sistemi</div></div><div class="card-status-tag cst-bekliyor" id="t-cs1">Onay Bekliyor</div></div>
-        <div class="card-foot"><div class="card-foot-name">LMS sistemi tanıtım</div><div class="card-foot-date">30 Mayıs 2026</div></div>
-      </div>
-      <div class="content-card" onclick="showOnayDetail(2)">
-        <div class="card-thumb" style="background:#1a1a2e"><div style="text-align:center;padding:10px"><div style="font-size:20px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1.1">SI<br>YAH</div><div style="font-size:11px;font-weight:700;color:#fff">ACT 300</div></div><div class="card-status-tag cst-bekliyor" id="t-cs2">Onay Bekliyor</div></div>
-        <div class="card-foot"><div class="card-foot-name">Siyah ACT 300 Reels</div><div class="card-foot-date">15 Mayıs 2026</div></div>
-      </div>
-      <div class="content-card">
-        <div class="card-thumb" style="background:#dc2626"><div style="text-align:center;padding:10px"><div style="font-size:16px;font-weight:900;color:#fff;line-height:1.1">KIR<br>MIZI<br>ACT</div></div><div class="card-status-tag cst-onay">Paylaşıldı</div></div>
-        <div class="card-foot"><div class="card-foot-name">Kırmızı ACT 200</div><div class="card-foot-date">Paylaşıldı: 1 Mayıs</div></div>
-      </div>
-    </div>
-  </div>
-  <div id="onay-detail-wrap" style="display:none">
-    <div class="card">
-      <div style="background:var(--bg3);display:flex;align-items:center;justify-content:center;padding:24px;min-height:160px" id="onay-thumb-area">
-        <div style="width:110px;aspect-ratio:9/16;background:#1C1C2E;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px"><div style="font-size:12px;font-weight:900;color:#fff;text-align:center;line-height:1.2" id="onay-thumb-txt">İçerik</div></div>
-      </div>
-      <div style="padding:14px 16px;border-bottom:1px solid var(--border)">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
-          <div style="width:30px;height:30px;border-radius:50%;background:var(--purple-bg);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--purple)">BG</div>
-          <div><div style="font-size:12px;font-weight:700;color:var(--text)">bilişim_garajı</div><div style="font-size:10px;color:var(--text2)">7.685 takipçi</div></div>
-        </div>
-        <div style="font-size:12px;color:var(--text);line-height:1.6" id="onay-caption">Açıklama...</div>
-        <div style="font-size:11px;color:var(--purple);margin-top:6px" id="onay-hashtags">#hashtag</div>
-        <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)"><i class="ti ti-calendar" style="font-size:13px"></i><span id="onay-date">Tarih</span></div>
-      </div>
-      <div class="onay-actions">
-        <button class="onay-btn ob-revize" onclick="showRevizeBox()"><i class="ti ti-refresh" style="font-size:15px"></i><span id="t-revize-btn">Revize</span></button>
-        <button class="onay-btn ob-onayla" onclick="onaylaContent()"><i class="ti ti-check" style="font-size:15px"></i><span id="t-onayla-btn">Onayla</span></button>
-      </div>
-      <div id="revize-box" style="display:none">
-        <div class="revize-area">
-          <div style="font-size:12px;font-weight:700;color:var(--text)" id="t-revize-lbl">Revize notunuzu yazın</div>
-          <textarea class="revize-ta" id="t-rev-ta" placeholder="Nelerin değişmesini istiyorsunuz?"></textarea>
-          <button class="send-btn" onclick="gonderRevize()"><i class="ti ti-send" style="font-size:14px"></i><span id="t-gonder-btn">Gönder</span></button>
-        </div>
-      </div>
-    </div>
+    <div class="row" onclick="goPage('musteri-detay')"><div class="row-main"><div class="row-name">BİLİŞİM GARAJI</div><div class="row-meta">3 onay bekliyor · 8 onaylandı</div></div><div class="badge b-amber">3</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
+    <div class="row" onclick="goPage('musteri-detay')"><div class="row-main"><div class="row-name">SEZİN SİMGE TORAK</div><div class="row-meta">5 onay bekliyor · 4 gün gecikti</div></div><div class="badge b-red">5</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
+    <div class="row" onclick="goPage('musteri-detay')"><div class="row-main"><div class="row-name">Gold Performans FUTBOL</div><div class="row-meta">3 onay bekliyor</div></div><div class="badge b-amber">3</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
+    <div class="row" onclick="goPage('musteri-detay')"><div class="row-main"><div class="row-name">VENETİA PİZZA</div><div class="row-meta">2 onay bekliyor</div></div><div class="badge b-amber">2</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
+    <div class="row"><div class="row-main"><div class="row-name">BOĞATEPE MANDIRA</div><div class="row-meta">Tüm içerikler onaylandı</div></div><div class="badge b-green">Tamam</div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
   </div>
 </div>
 </div>
 
 <!-- YÖNETİM -->
 <div id="page-yonetim" class="page">
-<div class="content section-gap">
-  <div><div class="greeting" id="t-yonetim-title">Yönetim</div><div class="sub" id="t-yonetim-sub">Sistem ayarları</div></div>
+<div class="content sg">
+  <div><div class="greeting">Yönetim</div><div class="sub">Sistem ayarları</div></div>
   <div class="stats-grid">
-    <div class="stat-card"><div class="stat-icon si-p"><i class="ti ti-users"></i></div><div><div class="stat-val">55</div><div class="stat-lbl" id="t-aktif-must">Aktif müşteri</div></div></div>
-    <div class="stat-card"><div class="stat-icon si-a"><i class="ti ti-archive"></i></div><div><div class="stat-val">34</div><div class="stat-lbl" id="t-arsiv">Arşiv</div></div></div>
-    <div class="stat-card"><div class="stat-icon si-g"><i class="ti ti-checklist"></i></div><div><div class="stat-val">392</div><div class="stat-lbl" id="t-toplam-gorev">Toplam görev</div></div></div>
-    <div class="stat-card"><div class="stat-icon si-r"><i class="ti ti-users-group"></i></div><div><div class="stat-val">11</div><div class="stat-lbl" id="t-ekip-uye">Ekip üyesi</div></div></div>
+    <div class="stat-card"><div class="stat-icon si-p"><i class="ti ti-users"></i></div><div><div class="stat-val">55</div><div class="stat-lbl">Aktif müşteri</div></div></div>
+    <div class="stat-card"><div class="stat-icon si-a"><i class="ti ti-archive"></i></div><div><div class="stat-val">34</div><div class="stat-lbl">Arşiv</div></div></div>
+    <div class="stat-card"><div class="stat-icon si-g"><i class="ti ti-checklist"></i></div><div><div class="stat-val">392</div><div class="stat-lbl">Toplam görev</div></div></div>
+    <div class="stat-card"><div class="stat-icon si-r"><i class="ti ti-users-group"></i></div><div><div class="stat-val">11</div><div class="stat-lbl">Ekip üyesi</div></div></div>
   </div>
   <div class="card">
-    <div class="card-hdr"><span class="card-title" id="t-hizli-islemler">Hızlı İşlemler</span></div>
-    <div class="row"><i class="ti ti-user-plus" style="font-size:18px;color:var(--purple)"></i><div class="row-main"><div class="row-name" id="t-kullanici-ekle">Kullanıcı Ekle</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-    <div class="row"><i class="ti ti-package" style="font-size:18px;color:var(--purple)"></i><div class="row-main"><div class="row-name" id="t-paket-olustur">Paket Oluştur</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-    <div class="row"><i class="ti ti-tag" style="font-size:18px;color:var(--purple)"></i><div class="row-main"><div class="row-name" id="t-statu-ekle">Statü Ekle</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-    <div class="row"><i class="ti ti-brand-instagram" style="font-size:18px;color:var(--purple)"></i><div class="row-main"><div class="row-name" id="t-sosyal-tanimla">Sosyal Medya Profili Tanımla</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
-    <div class="row"><i class="ti ti-folder-plus" style="font-size:18px;color:var(--purple)"></i><div class="row-main"><div class="row-name" id="t-proje-olustur">Proje Oluştur</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
+    <div class="card-hdr"><span class="card-title">Hızlı İşlemler</span></div>
+    <div class="row"><i class="ti ti-user-plus" style="font-size:18px;color:var(--purple)"></i><div class="row-main"><div class="row-name">Kullanıcı Ekle</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
+    <div class="row"><i class="ti ti-package" style="font-size:18px;color:var(--purple)"></i><div class="row-main"><div class="row-name">Paket Oluştur</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
+    <div class="row"><i class="ti ti-brand-instagram" style="font-size:18px;color:var(--purple)"></i><div class="row-main"><div class="row-name">Sosyal Medya Profili Tanımla</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
+    <div class="row"><i class="ti ti-folder-plus" style="font-size:18px;color:var(--purple)"></i><div class="row-main"><div class="row-name">Proje Oluştur</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
   </div>
 </div>
 </div>
 
+<!-- CEYDA PANELİ -->
+<div id="page-ceyda" class="page">
+<div class="content sg">
+  <div><div class="greeting">Merhaba, Ceyda</div><div class="sub">Bugün oluşturulacak görevler</div></div>
+  <button class="big-btn" onclick="goPage('yeni-gorev')"><i class="ti ti-plus"></i>Yeni Görev Oluştur ve Ata</button>
+  <div style="font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px">Bu hafta oluşturduğun görevler</div>
+  <div class="card">
+    <div class="row"><div class="dot" style="background:#534AB7"></div><div class="row-main"><div class="row-name">BİLİŞİM GARAJI — Okul dijitale mi reels</div><div class="row-meta">Can Çolak · Oluşturuldu bugün</div></div><div class="badge b-purple">Devam</div></div>
+    <div class="row"><div class="dot" style="background:#EF9F27"></div><div class="row-main"><div class="row-name">SEZİN SİMGE TORAK — Diş köprüsü post</div><div class="row-meta">EdaNur Teymen · Serdar'da</div></div><div class="badge b-amber">Onayda</div></div>
+    <div class="row"><div class="dot" style="background:#1D9E75"></div><div class="row-main"><div class="row-name">Gold Performans — Antrenman reels</div><div class="row-meta">Mustafa Evren · Tamamlandı</div></div><div class="badge b-green">Bitti</div></div>
+    <div class="row"><div class="dot" style="background:#E24B4A"></div><div class="row-main"><div class="row-name">VENETİA PİZZA — Menü tanıtım</div><div class="row-meta">Efe Cansever · Revize istendi</div></div><div class="badge b-red">Revize</div></div>
+  </div>
+</div>
+</div>
+
+<!-- SERDAR PANELİ -->
+<div id="page-serdar" class="page">
+<div class="content sg">
+  <div><div class="greeting">Merhaba, Serdar</div><div class="sub">Senin onayını bekleyen içerikler</div></div>
+  <div class="card">
+    <div class="card-hdr"><span class="card-title">Onay bekleyen</span><span style="font-size:11px;color:#ef4444;font-weight:500">18 içerik</span></div>
+    <div class="row" onclick="goPage('serdar-onay')"><div class="dot" style="background:#534AB7"></div><div class="row-main"><div class="row-name">Kaplama yapılan diş çürür mü?</div><div class="row-meta">SEZİN SİMGE TORAK · Post · EdaNur</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
+    <div class="row" onclick="goPage('serdar-onay')"><div class="dot" style="background:#1D9E75"></div><div class="row-main"><div class="row-name">Gold Performans antrenman serisi</div><div class="row-meta">Gold Performans · Reels · Can</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
+    <div class="row" onclick="goPage('serdar-onay')"><div class="dot" style="background:#EF9F27"></div><div class="row-main"><div class="row-name">Tabela reels</div><div class="row-meta">IDEIO CREATIVE · Reels · Mustafa</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
+    <div class="row" onclick="goPage('serdar-onay')"><div class="dot" style="background:#D4537E"></div><div class="row-main"><div class="row-name">Doğal süt üretim süreci</div><div class="row-meta">BOĞATEPE MANDIRA · Reels · Efe</div></div><i class="ti ti-chevron-right" style="font-size:14px;color:var(--text3)"></i></div>
+  </div>
+  <div class="card">
+    <div class="card-hdr"><span class="card-title">Bugün onayladıkların</span><span style="font-size:11px;color:var(--green);font-weight:500">7 içerik</span></div>
+    <div class="row"><div class="dot" style="background:var(--green)"></div><div class="row-main"><div class="row-name">VENETİA PİZZA yeni menü tanıtım</div><div class="row-meta">Müşteriye gönderildi</div></div><div class="badge b-green">Onaylandı</div></div>
+  </div>
+</div>
+</div>
+
+<!-- SERDAR ONAY DETAY -->
+<div id="page-serdar-onay" class="page">
+<div class="content sg">
+  <button class="back-btn" onclick="goPage('serdar')"><i class="ti ti-arrow-left" style="font-size:15px"></i>Geri</button>
+  <div class="card">
+    <div style="background:var(--bg3);display:flex;align-items:center;justify-content:center;padding:28px">
+      <div style="width:120px;aspect-ratio:9/16;background:#1C1C2E;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px">
+        <div style="font-size:12px;font-weight:900;color:#fff;text-align:center;line-height:1.2">KAPLAMA<br>YAPILAN<br>DİŞ</div>
+      </div>
+    </div>
+    <div style="padding:14px 16px;border-bottom:1px solid var(--border)">
+      <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:4px">Kaplama yapılan diş çürür mü?</div>
+      <div style="font-size:11px;color:var(--text2);margin-bottom:8px">SEZİN SİMGE TORAK · Post · EdaNur Teymen</div>
+      <div style="font-size:11px;color:var(--text2);margin-bottom:4px">Drive linki</div>
+      <div style="font-size:12px;color:var(--purple)">drive.google.com/file/d/1abc...</div>
+    </div>
+    <div class="onay-row" id="serdar-actions">
+      <button class="onay-btn ob-rev" onclick="serdarRevize()"><i class="ti ti-refresh" style="font-size:15px"></i>Revize Gönder</button>
+      <button class="onay-btn ob-ok" onclick="serdarOnayla()"><i class="ti ti-check" style="font-size:15px"></i>Müşteriye Gönder</button>
+    </div>
+    <div id="serdar-revize-box" style="display:none;padding:14px 16px;border-top:1px solid var(--border)">
+      <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:6px">Revize notu</div>
+      <textarea class="form-input" style="resize:none;min-height:70px" placeholder="Nelerin değişmesi gerekiyor?"></textarea>
+      <button class="big-btn" style="margin-top:10px;margin-bottom:0" onclick="goPage('serdar')"><i class="ti ti-send"></i>Revize Gönder</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- EKİP PANELİ -->
+<div id="page-ekip" class="page">
+<div class="content sg">
+  <div><div class="greeting" id="ekip-greeting">Merhaba, EdaNur</div><div class="sub">Bugün sende olan görevler</div></div>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-icon si-r"><i class="ti ti-clock"></i></div><div><div class="stat-val" style="color:#ef4444">2</div><div class="stat-lbl">Bugün bitiyor</div></div></div>
+    <div class="stat-card"><div class="stat-icon si-p"><i class="ti ti-checklist"></i></div><div><div class="stat-val" style="color:var(--purple)">15</div><div class="stat-lbl">Aktif görev</div></div></div>
+  </div>
+  <div class="card">
+    <div class="card-hdr"><span class="card-title">Görevlerim</span></div>
+    <div class="row"><div class="dot" style="background:#ef4444"></div><div class="row-main"><div class="row-name">Kaplama yapılan diş çürür mü?</div><div class="row-meta">SEZİN SİMGE TORAK · Post · Bugün bitiyor</div></div><div class="badge b-red">Acil</div></div>
+    <div class="row"><div class="dot" style="background:var(--amber)"></div><div class="row-main"><div class="row-name">Diş sıkma baş ağrısı post</div><div class="row-meta">SEZİN SİMGE TORAK · Post · Yarın bitiyor</div></div><div class="badge b-amber">Yakın</div></div>
+    <div class="row"><div class="dot" style="background:#534AB7"></div><div class="row-main"><div class="row-name">LMS sistemi grafik tasarım</div><div class="row-meta">BİLİŞİM GARAJI · Post · 3 gün kaldı</div></div><div class="badge b-purple">Devam</div></div>
+    <div class="row"><div class="dot" style="background:#534AB7"></div><div class="row-main"><div class="row-name">ESBAY İSG ofis görselleri</div><div class="row-meta">ESBAY İSG · Post · 5 gün kaldı</div></div><div class="badge b-purple">Devam</div></div>
+  </div>
+  <button style="display:flex;align-items:center;justify-content:center;gap:6px;padding:13px;border-radius:12px;background:var(--bg2);color:var(--purple);font-size:13px;font-weight:700;border:1px solid var(--purple);cursor:pointer;width:100%" onclick="goPage('serdar')">
+    <i class="ti ti-arrow-right" style="font-size:15px"></i>Serdar'a Onayla Gönder
+  </button>
+</div>
+</div>
+
+<!-- TUANA PANELİ -->
+<div id="page-tuana" class="page">
+<div class="content sg">
+  <div><div class="greeting">Merhaba, Tuana</div><div class="sub">Paylaşım takvimi — Mayıs 2026</div></div>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-icon si-p"><i class="ti ti-rocket"></i></div><div><div class="stat-val" style="color:var(--purple)">118</div><div class="stat-lbl">Paylaşıma hazır</div></div></div>
+    <div class="stat-card"><div class="stat-icon si-g"><i class="ti ti-send"></i></div><div><div class="stat-val" style="color:var(--green)">51</div><div class="stat-lbl">Paylaşıldı</div></div></div>
+  </div>
+  <div style="font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px">Bu hafta paylaşılacaklar</div>
+  <div class="card">
+    <div class="takvim-row"><div class="takvim-date"><div class="t-gun">10</div><div class="t-ay">May</div></div><div class="row-main"><div class="row-name">Gold Performans VOLEYBOL — Reels</div><div class="row-meta">Instagram · 18:00</div></div><div class="badge b-green">Hazır</div></div>
+    <div class="takvim-row"><div class="takvim-date"><div class="t-gun">11</div><div class="t-ay">May</div></div><div class="row-main"><div class="row-name">BOĞATEPE MANDIRA — Post</div><div class="row-meta">Instagram · 12:00</div></div><div class="badge b-green">Hazır</div></div>
+    <div class="takvim-row"><div class="takvim-date"><div class="t-gun">12</div><div class="t-ay">May</div></div><div class="row-main"><div class="row-name">ESBAY İSG — Reels</div><div class="row-meta">Instagram · 10:00</div></div><div class="badge b-amber">Onay bekl.</div></div>
+    <div class="takvim-row"><div class="takvim-date"><div class="t-gun">13</div><div class="t-ay">May</div></div><div class="row-main"><div class="row-name">BİLİŞİM GARAJI — Post</div><div class="row-meta">Instagram · 14:00</div></div><div class="badge b-green">Hazır</div></div>
+    <div class="takvim-row"><div class="takvim-date"><div class="t-gun">14</div><div class="t-ay">May</div></div><div class="row-main"><div class="row-name">SEZİN SİMGE TORAK — Post</div><div class="row-meta">Instagram · 11:00</div></div><div class="badge b-red">Onay yok</div></div>
+  </div>
+</div>
+</div>
+
+<!-- MÜŞTERİ DETAY -->
+<div id="page-musteri-detay" class="page">
+<div class="content sg">
+  <button class="back-btn" onclick="goPage('musteriler')"><i class="ti ti-arrow-left" style="font-size:15px"></i>Tüm müşteriler</button>
+  <div style="display:flex;align-items:center;gap:10px">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--pbg);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--purple)">BG</div>
+    <div><div class="greeting" style="font-size:16px">bilişim_garajı</div><div class="sub">3 onay bekliyor</div></div>
+  </div>
+  <div class="grid-2">
+    <div class="content-card" onclick="goPage('musteri-icerik')">
+      <div class="card-thumb" style="background:#1C1C2E;padding:10px;display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center"><div style="font-size:14px;font-weight:900;color:#fff;line-height:1.2">ÇIRAK<br>KALFA<br>USTA</div></div>
+        <div class="cst cst-bek">Onay Bekliyor</div>
+      </div>
+      <div class="card-foot"><div class="card-foot-name">Çırak - Kalfa - Usta</div><div class="card-foot-date">28 Mayıs 2026</div></div>
+    </div>
+    <div class="content-card">
+      <div class="card-thumb" style="background:#dc2626;padding:10px;display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center"><div style="font-size:16px;font-weight:900;color:#fff;line-height:1.1">KIR<br>MIZI<br>ACT</div></div>
+        <div class="cst cst-onay">Paylaşıldı</div>
+      </div>
+      <div class="card-foot"><div class="card-foot-name">Kırmızı ACT 200</div><div class="card-foot-date">Paylaşıldı: 1 Mayıs</div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- MÜŞTERİ İÇERİK DETAY -->
+<div id="page-musteri-icerik" class="page">
+<div class="content sg">
+  <button class="back-btn" onclick="goPage('musteri-detay')"><i class="ti ti-arrow-left" style="font-size:15px"></i>Geri</button>
+  <div class="card">
+    <div style="background:var(--bg3);display:flex;align-items:center;justify-content:center;padding:28px">
+      <div style="width:140px;aspect-ratio:9/16;background:#1C1C2E;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:14px">
+        <div style="text-align:center"><div style="font-size:14px;font-weight:900;color:#fff;line-height:1.2">ÇIRAK<br>KALFA<br>USTA</div></div>
+      </div>
+    </div>
+    <div style="padding:14px 16px;border-bottom:1px solid var(--border)">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+        <div style="width:30px;height:30px;border-radius:50%;background:var(--pbg);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--purple)">BG</div>
+        <div><div style="font-size:12px;font-weight:700;color:var(--text)">bilişim_garajı</div><div style="font-size:10px;color:var(--text2)">7.685 takipçi</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--text);line-height:1.6">Bilişim dünyasında uzmanlığa giden yol sabır ve pratikle inşa ediliyor! Çıraklıktan ustalığa uzanan bu kademeli eğitim modelimizle...</div>
+      <div style="font-size:11px;color:var(--purple);margin-top:6px">#TeknolojiEğitimi #GelişimYolculuğu #GeleceğinMucitleri</div>
+      <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">
+        <i class="ti ti-calendar" style="font-size:13px"></i>Paylaşım: 28 Mayıs 2026
+      </div>
+    </div>
+    <div class="onay-row" id="icerik-actions">
+      <button class="onay-btn ob-rev" onclick="icerikRevize()"><i class="ti ti-refresh" style="font-size:15px"></i>Revize</button>
+      <button class="onay-btn ob-ok" onclick="icerikOnayla()"><i class="ti ti-check" style="font-size:15px"></i>Onayla</button>
+    </div>
+    <div id="icerik-revize-box" style="display:none;padding:14px 16px;border-top:1px solid var(--border)">
+      <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:6px">Revize notunuzu yazın</div>
+      <textarea class="form-input" style="resize:none;min-height:70px" placeholder="Nelerin değişmesini istiyorsunuz?"></textarea>
+      <button class="big-btn" style="margin-top:10px;margin-bottom:0" onclick="goPage('musteri-detay')"><i class="ti ti-send"></i>Gönder</button>
+    </div>
+  </div>
+</div>
+</div>
+
+</div><!-- pages-wrap -->
+</div><!-- main-system -->
+
 <script>
-/* TEMA */
+var users={
+  ugur:{pass:'ideio2026',rol:'yonetici',ad:'Uğur Fırat',av:'UF'},
+  ceyda:{pass:'ideio2026',rol:'ceyda',ad:'Ceyda',av:'CY'},
+  serdar:{pass:'ideio2026',rol:'serdar',ad:'Serdar',av:'SE'},
+  edanur:{pass:'ideio2026',rol:'ekip',ad:'EdaNur Teymen',av:'ET',ekipAd:'EdaNur'},
+  can:{pass:'ideio2026',rol:'ekip',ad:'Can Çolak',av:'CC',ekipAd:'Can'},
+  mustafa:{pass:'ideio2026',rol:'ekip',ad:'Mustafa Evren',av:'ME',ekipAd:'Mustafa'},
+  efe:{pass:'ideio2026',rol:'ekip',ad:'Efe Cansever',av:'EF',ekipAd:'Efe'},
+  ozan:{pass:'ideio2026',rol:'ekip',ad:'Ozan Mayasız',av:'OZ',ekipAd:'Ozan'},
+  tuana:{pass:'ideio2026',rol:'tuana',ad:'Tuana',av:'TU'},
+  bilisimgaraji:{pass:'ideio2026',rol:'musteri',ad:'Bilişim Garajı',av:'BG'}
+};
+
+var curUser=null;
+var curPage='dashboard';
+var prevPage='dashboard';
+
+var navConfig={
+  yonetici:[
+    {id:'dashboard',label:'Ana Sayfa',icon:'ti-layout-dashboard'},
+    {id:'gorevler',label:'Görevler',icon:'ti-checklist',badge:'18'},
+    {id:'cekim',label:'Çekim',icon:'ti-camera'},
+    {id:'paylasim',label:'Paylaşım',icon:'ti-share'},
+    {id:'musteriler',label:'Müşteriler',icon:'ti-users'},
+    {id:'yonetim',label:'Yönetim',icon:'ti-settings'}
+  ],
+  ceyda:[
+    {id:'ceyda',label:'Görevlerim',icon:'ti-checklist'},
+    {id:'yeni-gorev',label:'Yeni Görev',icon:'ti-plus'}
+  ],
+  serdar:[
+    {id:'serdar',label:'Onay Bekleyenler',icon:'ti-eye',badge:'18'}
+  ],
+  ekip:[
+    {id:'ekip',label:'Görevlerim',icon:'ti-checklist'}
+  ],
+  tuana:[
+    {id:'tuana',label:'Paylaşım Takvimi',icon:'ti-share'}
+  ],
+  musteri:[]
+};
+
+function doLogin(){
+  var u=document.getElementById('login-user').value.trim().toLowerCase();
+  var p=document.getElementById('login-pass').value;
+  var err=document.getElementById('login-err');
+  if(users[u]&&users[u].pass===p){
+    err.style.display='none';
+    curUser=users[u];
+    curUser.username=u;
+    document.getElementById('login-page').style.display='none';
+    document.getElementById('main-system').style.display='block';
+    setupForUser();
+  } else {
+    err.style.display='block';
+  }
+}
+
+document.getElementById('login-pass').addEventListener('keydown',function(e){if(e.key==='Enter')doLogin();});
+document.getElementById('login-user').addEventListener('keydown',function(e){if(e.key==='Enter')document.getElementById('login-pass').focus();});
+
+function setupForUser(){
+  document.getElementById('user-av').textContent=curUser.av;
+  var rol=curUser.rol;
+  document.getElementById('flow-bar').style.display=rol==='yonetici'?'flex':'none';
+  buildNav(rol);
+  if(rol==='musteri'){
+    document.getElementById('sys-topbar').style.display='flex';
+    document.getElementById('main-nav').style.display='none';
+    document.getElementById('pages-wrap').style.display='none';
+    showMusteriSocial();
+  } else if(rol==='ceyda'){
+    goPage('ceyda');
+  } else if(rol==='serdar'){
+    goPage('serdar');
+  } else if(rol==='ekip'){
+    document.getElementById('ekip-greeting').textContent='Merhaba, '+curUser.ekipAd;
+    goPage('ekip');
+  } else if(rol==='tuana'){
+    goPage('tuana');
+  } else {
+    goPage('dashboard');
+  }
+}
+
+function buildNav(rol){
+  var nav=document.getElementById('main-nav');
+  nav.innerHTML='';
+  var items=navConfig[rol]||[];
+  if(items.length===0){nav.style.display='none';return;}
+  nav.style.display='flex';
+  items.forEach(function(item,i){
+    var btn=document.createElement('button');
+    btn.className='nav-btn'+(i===0?' active':'');
+    btn.innerHTML='<i class="ti '+item.icon+'"></i>'+item.label+(item.badge?'<span class="nbadge">'+item.badge+'</span>':'');
+    btn.onclick=function(){goPage(item.id);};
+    btn.dataset.page=item.id;
+    nav.appendChild(btn);
+  });
+}
+
+function goPage(id){
+  prevPage=curPage;
+  curPage=id;
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
+  var pg=document.getElementById('page-'+id);
+  if(pg) pg.classList.add('active');
+  document.querySelectorAll('.nav-btn').forEach(function(b){
+    b.classList.toggle('active',b.dataset.page===id);
+  });
+  window.scrollTo(0,0);
+}
+
+function goBack(){goPage(prevPage);}
+
+function doLogout(){
+  curUser=null;
+  document.getElementById('main-system').style.display='none';
+  document.getElementById('musteri-social').style.display='none';
+  document.getElementById('pages-wrap').style.display='block';
+  document.getElementById('login-page').style.display='flex';
+  document.getElementById('login-user').value='';
+  document.getElementById('login-pass').value='';
+}
+
 var isDark=false;
 function toggleTheme(){
   isDark=!isDark;
@@ -592,68 +674,18 @@ function toggleTheme(){
   document.getElementById('theme-btn').innerHTML=isDark?'<i class="ti ti-sun" style="font-size:15px"></i>':'<i class="ti ti-moon" style="font-size:15px"></i>';
 }
 
-/* ROL MENU */
-function toggleRolMenu(){
-  document.getElementById('rol-menu').classList.toggle('open');
-}
-document.addEventListener('click',function(e){
-  if(!e.target.closest('#av-btn')&&!e.target.closest('#rol-menu')) document.getElementById('rol-menu').classList.remove('open');
-});
-
-var lang='tr';
-var tr={logo:'IDEIO Creative',flow_c:'Ceyda oluşturur',flow_e:'Ekip yapar',flow_s:'Serdar onaylar',flow_m:'Müşteri onaylar',flow_t:'Tuana paylaşır',ana:'Ana Sayfa',gorev:'Görevler',cekim:'Çekim',paylasim:'Paylaşım',musteriler:'Müşteriler',yonetim:'Yönetim',greeting:'Günaydın, Uğur',greet_sub:'10 Mayıs 2026 · 392 görev',s1:'Geciken onay',s2:"Serdar'da bekliyor",s3:'Paylaşıma hazır',s4:'Bu ay paylaşıldı',geciken:'Geciken müşteri onayları',r1m:'5 içerik · 4 gündür bekliyor',r1b:'4 gün',r2m:'3 içerik · 2 gündür bekliyor',r2b:'2 gün',r3m:'2 içerik · 1 gündür bekliyor',r3b:'1 gün',r4m:'1 içerik · bugün gönderildi',r4b:'Bugün',ekip_lbl:'Ekip yükü — bugün',eda_role:'Grafik tasarım',me_role:'Video edit',ef_role:'Videographer',gorev_title:'Görevler',gorev_sub:'392 görev · Mayıs 2026',yeni_btn:'Yeni Görev',toast_ok:'Görev başarıyla oluşturuldu',toast_sub:'BİLİŞİM GARAJI — Yeni reels görevi eklendi',onay_bekliyor:"Serdar'da bekliyor",onayda:'Onayda',devam_lbl:'Devam eden',acil:'Acil',yakin:'Yakın',devam:'Devam',paylasim_hazir:'Paylaşıma hazır',hazir:'Hazır',yeni_gorev_title:'Yeni Görev',back:'Geri',musteri_lbl:'Müşteri',baslik_lbl:'Görev başlığı',baslik_ph:'Ne yapılacak?',tip_lbl:'İçerik tipi',ata_lbl:'Kime ata',et_meta:'Grafik tasarım · 15 aktif görev',bitis_lbl:'Bitiş tarihi',paylasim_lbl:'Paylaşım tarihi',olustur_btn:'Görevi Oluştur ve Ata',cekim_title:'Çekim Takvimi',cekim_sub:'Mayıs 2026',yeni_cekim:'Yeni',pzt:'Pzt',sal:'Sal',car:'Çar',per:'Per',cum:'Cum',cmt:'Cmt',paz:'Paz',paylasim_title:'Paylaşım Takvimi',paylasim_title_sub:'Mayıs 2026 · Tuana',p_hazir:'Paylaşıma hazır',p_paylasild:'Paylaşıldı',bu_hafta:'Bu hafta paylaşılacaklar',may:'May',hazir_b:'Hazır',onay_bekl:'Onay bekl.',onay_yok:'Onay yok',must_title:'Müşteriler',must_sub:'40 müşteri · Mayıs 2026',m2:'5 onay bekliyor · 4 gün gecikti',tamam:'Tamam',back2:'Tüm müşteriler',bek_lbl:'Onay bekliyor',onay_lbl:'Onaylandı',icerik_lbl:'İçerikler — Mayıs 2026',cs_bekliyor:'Onay Bekliyor',revize_btn:'Revize',onayla_btn:'Onayla',revize_lbl:'Revize notunuzu yazın',gonder_btn:'Gönder',yonetim_title:'Yönetim',yonetim_sub:'Sistem ayarları',aktif_must:'Aktif müşteri',arsiv:'Arşiv',toplam_gorev:'Toplam görev',ekip_uye:'Ekip üyesi',hizli:'Hızlı İşlemler',k_ekle:'Kullanıcı Ekle',p_olustur:'Paket Oluştur',s_ekle:'Statü Ekle',sos_tanimla:'Sosyal Medya Profili Tanımla',proje:'Proje Oluştur',rm_yonetici:'Yönetici',rm_danisma:'İletişim Danışmanı',rm_koord:'Koordinatör',rm_ekip:'Ekip',rm_sosyal:'Sosyal Medya',rm_musteri:'Müşteri',p_hazir_lbl:'Paylaşıma hazır',onay_bekl2:'Onay bekliyor'};
-var en={logo:'IDEIO Creative',flow_c:'Ceyda creates',flow_e:'Team works',flow_s:'Serdar approves',flow_m:'Client approves',flow_t:'Tuana publishes',ana:'Home',gorev:'Tasks',cekim:'Shooting',paylasim:'Publishing',musteriler:'Clients',yonetim:'Settings',greeting:'Good morning, Uğur',greet_sub:'May 10, 2026 · 392 tasks',s1:'Delayed approvals',s2:'Waiting for Serdar',s3:'Ready to publish',s4:'Published this month',geciken:'Delayed client approvals',r1m:'5 content · 4 days delayed',r1b:'4 days',r2m:'3 content · 2 days',r2b:'2 days',r3m:'2 content · 1 day',r3b:'1 day',r4m:'1 content · sent today',r4b:'Today',ekip_lbl:'Team workload — today',eda_role:'Graphic design',me_role:'Video edit',ef_role:'Videographer',gorev_title:'Tasks',gorev_sub:'392 tasks · May 2026',yeni_btn:'New Task',toast_ok:'Task created successfully',toast_sub:'BİLİŞİM GARAJI — New reels task added',onay_bekliyor:'Waiting for Serdar',onayda:'In review',devam_lbl:'In progress',acil:'Urgent',yakin:'Soon',devam:'Active',paylasim_hazir:'Ready to publish',hazir:'Ready',yeni_gorev_title:'New Task',back:'Back',musteri_lbl:'Client',baslik_lbl:'Task title',baslik_ph:'What needs to be done?',tip_lbl:'Content type',ata_lbl:'Assign to',et_meta:'Graphic design · 15 active tasks',bitis_lbl:'Deadline',paylasim_lbl:'Publish date',olustur_btn:'Create & Assign Task',cekim_title:'Shooting Calendar',cekim_sub:'May 2026',yeni_cekim:'New',pzt:'Mon',sal:'Tue',car:'Wed',per:'Thu',cum:'Fri',cmt:'Sat',paz:'Sun',paylasim_title:'Publishing Calendar',paylasim_title_sub:'May 2026 · Tuana',p_hazir:'Ready to publish',p_paylasild:'Published',bu_hafta:'This week',may:'May',hazir_b:'Ready',onay_bekl:'Pending',onay_yok:'No approval',must_title:'Clients',must_sub:'40 clients · May 2026',m2:'5 pending · 4 days late',tamam:'OK',back2:'All clients',bek_lbl:'Pending approval',onay_lbl:'Approved',icerik_lbl:'Content — May 2026',cs_bekliyor:'Pending Approval',revize_btn:'Request Revision',onayla_btn:'Approve',revize_lbl:'Write your revision note',gonder_btn:'Send',yonetim_title:'Settings',yonetim_sub:'System settings',aktif_must:'Active clients',arsiv:'Archive',toplam_gorev:'Total tasks',ekip_uye:'Team members',hizli:'Quick Actions',k_ekle:'Add User',p_olustur:'Create Package',s_ekle:'Add Status',sos_tanimla:'Add Social Media Profile',proje:'Create Project',rm_yonetici:'Manager',rm_danisma:'Communications Advisor',rm_koord:'Coordinator',rm_ekip:'Team',rm_sosyal:'Social Media',rm_musteri:'Client',p_hazir_lbl:'Ready to publish',onay_bekl2:'Pending approval'};
-
 function setLang(l,el){
-  lang=l;
   document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.remove('on')});
   el.classList.add('on');
-  applyLang();
 }
 
-function applyLang(){
-  var t=lang==='tr'?tr:en;
-  var m={'t-logo':'logo','t-flow-c':'flow_c','t-flow-e':'flow_e','t-flow-s':'flow_s','t-flow-m':'flow_m','t-flow-t':'flow_t','t-nav-ana':'ana','t-nav-gorev':'gorev','t-nav-cekim':'cekim','t-nav-paylasim':'paylasim','t-nav-musteriler':'musteriler','t-nav-yonetim':'yonetim','t-greeting':'greeting','t-greeting-sub':'greet_sub','t-s1':'s1','t-s2':'s2','t-s3':'s3','t-s4':'s4','t-geciken':'geciken','t-r1m':'r1m','t-r1b':'r1b','t-r2m':'r2m','t-r2b':'r2b','t-r3m':'r3m','t-r3b':'r3b','t-r4m':'r4m','t-r4b':'r4b','t-ekip-lbl':'ekip_lbl','t-eda-role':'eda_role','t-me-role':'me_role','t-ef-role':'ef_role','t-gorev-title':'gorev_title','t-gorev-sub':'gorev_sub','t-yeni-btn':'yeni_btn','t-toast-ok':'toast_ok','t-toast-sub':'toast_sub','t-onay-bekliyor':'onay_bekliyor','t-onayda':'onayda','t-onayda2':'onayda','t-devam-lbl':'devam_lbl','t-acil':'acil','t-yakin':'yakin','t-devam':'devam','t-paylasim-hazir':'paylasim_hazir','t-hazir':'hazir','t-yeni-gorev-title':'yeni_gorev_title','t-back':'back','t-musteri-lbl':'musteri_lbl','t-baslik-lbl':'baslik_lbl','t-tip-lbl':'tip_lbl','t-ata-lbl':'ata_lbl','t-et-meta':'et_meta','t-bitis-lbl':'bitis_lbl','t-paylasim-lbl':'paylasim_lbl','t-olustur-btn':'olustur_btn','t-cekim-title':'cekim_title','t-cekim-sub':'cekim_sub','t-yeni-cekim':'yeni_cekim','t-pzt':'pzt','t-sal':'sal','t-car':'car','t-per':'per','t-cum':'cum','t-cmt':'cmt','t-paz':'paz','t-paylasim-title':'paylasim_title','t-paylasim-title-sub':'paylasim_title_sub','t-p-hazir':'p_hazir','t-p-paylasild':'p_paylasild','t-bu-hafta':'bu_hafta','t-may':'may','t-hazir-b':'hazir_b','t-onay-bekl':'onay_bekl','t-onay-yok':'onay_yok','t-must-title':'must_title','t-must-sub':'must_sub','t-m2':'m2','t-tamam':'tamam','t-back2':'back2','t-bek-lbl':'bek_lbl','t-onay-lbl':'onay_lbl','t-icerik-lbl':'icerik_lbl','t-revize-btn':'revize_btn','t-onayla-btn':'onayla_btn','t-revize-lbl':'revize_lbl','t-gonder-btn':'gonder_btn','t-yonetim-title':'yonetim_title','t-yonetim-sub':'yonetim_sub','t-aktif-must':'aktif_must','t-arsiv':'arsiv','t-toplam-gorev':'toplam_gorev','t-ekip-uye':'ekip_uye','t-hizli-islemler':'hizli','t-kullanici-ekle':'k_ekle','t-paket-olustur':'p_olustur','t-statu-ekle':'s_ekle','t-sosyal-tanimla':'sos_tanimla','t-proje-olustur':'proje','t-rm-yonetici':'rm_yonetici','t-rm-danisma':'rm_danisma','t-rm-koord':'rm_koord','t-rm-ekip':'rm_ekip','t-rm-sosyal':'rm_sosyal','t-rm-musteri':'rm_musteri'};
-  Object.keys(m).forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=t[m[id]]||'';});
-  var ph=document.getElementById('t-baslik-ph');if(ph)ph.placeholder=t.baslik_ph;
-  var rta=document.getElementById('t-rev-ta');if(rta)rta.placeholder=lang==='tr'?'Nelerin değişmesini istiyorsunuz?':'What would you like changed?';
-  ['t-cs0','t-cs1','t-cs2'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=t.cs_bekliyor;});
-}
-
-/* SAYFA */
-function goPage(id,btn){
-  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
-  document.getElementById('page-'+id).classList.add('active');
-  if(btn){document.querySelectorAll('.nav-btn').forEach(function(b){b.classList.remove('active')});btn.classList.add('active');}
-  window.scrollTo(0,0);
-}
-
-/* ROL */
-function setRol(rol,el){
-  document.querySelectorAll('.rol-item').forEach(function(r){r.classList.remove('on')});
-  if(el) el.classList.add('on');
-  document.getElementById('rol-menu').classList.remove('open');
-  var rolAv={'yonetici':'UF','ceyda':'CY','serdar':'SE','ekip':'ET','tuana':'TU','musteri':'BG'};
-  document.getElementById('av-btn').childNodes[0].textContent=rolAv[rol]||'UF';
-  if(rol==='musteri'){
-    document.getElementById('ideio-social-overlay').style.display='flex';
-    document.getElementById('main-nav').style.display='none';
-    document.getElementById('flow-bar-wrap').style.display='none';
-  } else {
-    document.getElementById('ideio-social-overlay').style.display='none';
-    document.getElementById('main-nav').style.display='flex';
-    document.getElementById('flow-bar-wrap').style.display='flex';
-    goPage('dashboard',document.querySelector('.nav-btn'));
-  }
-}
-
-/* FORM */
 function selType(el){
   el.parentElement.querySelectorAll('.type-opt').forEach(function(t){t.classList.remove('on')});
   el.classList.add('on');
 }
+
 function selAtama(el){
-  el.parentElement.querySelectorAll('.atama-opt').forEach(function(a){
+  document.querySelectorAll('.atama-opt').forEach(function(a){
     a.classList.remove('on');
     var ic=a.querySelector('i');
     if(ic){ic.className='ti ti-circle';ic.style.color='var(--text3)';}
@@ -663,14 +695,29 @@ function selAtama(el){
   if(ic){ic.className='ti ti-circle-check';ic.style.color='var(--purple)';}
 }
 
+function serdarRevize(){
+  var b=document.getElementById('serdar-revize-box');
+  b.style.display=b.style.display==='none'?'block':'none';
+}
+function serdarOnayla(){
+  document.getElementById('serdar-actions').style.display='none';
+  goPage('serdar');
+}
+function icerikRevize(){
+  var b=document.getElementById('icerik-revize-box');
+  b.style.display=b.style.display==='none'?'block':'none';
+}
+function icerikOnayla(){
+  document.getElementById('icerik-actions').style.display='none';
+  goPage('musteri-detay');
+}
+
 /* TAKVİM */
 var calState={y:2026,m:4,sel:10};
-var months_tr=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
-var months_en=['January','February','March','April','May','June','July','August','September','October','November','December'];
-var calEvs={1:[{n:'Pro Estetik Diş',t:'11:30',l:'Bornova',c:'#534AB7'}],3:[{n:'Gold Performans FUTBOL',t:'10:00',l:'Antalya',c:'#1D9E75'}],4:[{n:'Gold Performans VOLEYBOL',t:'10:00',l:'Antalya',c:'#1D9E75'}],7:[{n:'BİLİŞİM GARAJI',t:'10:00',l:'İstanbul',c:'#378ADD'}],8:[{n:'VENETİA PİZZA',t:'14:00',l:'Bayraklı',c:'#EF9F27'}],11:[{n:'Pal Mühendislik',t:'10:00',l:'Ofis',c:'#D85A30'}],12:[{n:'ESBAY İSG',t:'11:00',l:'Ofis',c:'#534AB7'}],13:[{n:'Berkay Koray Nazlı',t:'08:30',l:'Alsancak',c:'#D4537E'},{n:'ERCEY DESİGN',t:'13:00',l:'La Puerta',c:'#1D9E75'}],14:[{n:'Rota Home Bellona',t:'10:00',l:'Mavişehir',c:'#EF9F27'},{n:'Sevil Tunabayoğlu',t:'17:00',l:'Bayraklı',c:'#534AB7'}],15:[{n:'Pal Mühendislik 2',t:'09:00',l:'Ege Palas',c:'#D85A30'}],16:[{n:'ESBAY İSG fabrika',t:'12:00',l:'Fabrika',c:'#534AB7'}],17:[{n:'ÖZLEM GÜRBÜZ NAZLI',t:'10:00',l:'Ekonomi Üni',c:'#D4537E'}]};
+var months=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+var calEvs={1:[{n:'Pro Estetik Diş',t:'11:30',l:'Bornova',c:'#534AB7'}],3:[{n:'Gold Performans FUTBOL',t:'10:00',l:'Antalya',c:'#1D9E75'}],7:[{n:'BİLİŞİM GARAJI',t:'10:00',l:'İstanbul',c:'#378ADD'}],8:[{n:'VENETİA PİZZA',t:'14:00',l:'Bayraklı',c:'#EF9F27'}],11:[{n:'Pal Mühendislik',t:'10:00',l:'Ofis',c:'#D85A30'}],13:[{n:'Berkay Koray Nazlı',t:'08:30',l:'Alsancak',c:'#D4537E'},{n:'ERCEY DESİGN',t:'13:00',l:'La Puerta',c:'#1D9E75'}],14:[{n:'Rota Home Bellona',t:'10:00',l:'Mavişehir',c:'#EF9F27'}],15:[{n:'Pal Mühendislik 2',t:'09:00',l:'Ege Palas',c:'#D85A30'}]};
 
 function renderCal(){
-  var months=lang==='tr'?months_tr:months_en;
   document.getElementById('cal-label').textContent=months[calState.m]+' '+calState.y;
   var fd=new Date(calState.y,calState.m,1).getDay();
   var days=new Date(calState.y,calState.m+1,0).getDate();
@@ -688,93 +735,132 @@ function renderCal(){
   })(d);}
   renderCalDetail();
 }
-
 function renderCalDetail(){
-  var months=lang==='tr'?months_tr:months_en;
   var evs=calEvs[calState.sel]||[];
   var isT=(calState.y===2026&&calState.m===4&&calState.sel===10);
-  var html='<div class="card"><div class="card-hdr"><span class="card-title">'+calState.sel+' '+months[calState.m]+(isT?(' — '+(lang==='tr'?'Bugün':'Today')):'')+'</span><span class="badge b-purple">'+evs.length+' '+(lang==='tr'?'çekim':'shoot')+'</span></div>';
-  if(evs.length===0){html+='<div style="text-align:center;padding:24px;color:var(--text3);font-size:13px"><i class="ti ti-camera-off" style="font-size:28px;display:block;margin-bottom:8px"></i>'+(lang==='tr'?'Bu gün çekim yok':'No shoots today')+'</div>';}
+  var html='<div class="card"><div class="card-hdr"><span class="card-title">'+calState.sel+' '+months[calState.m]+(isT?' — Bugün':'')+'</span><span class="badge b-purple">'+evs.length+' çekim</span></div>';
+  if(!evs.length){html+='<div style="text-align:center;padding:24px;color:var(--text3);font-size:13px"><i class="ti ti-camera-off" style="font-size:28px;display:block;margin-bottom:8px"></i>Bu gün çekim yok</div>';}
   else{html+=evs.map(function(ev){return '<div class="row"><div style="width:4px;height:40px;border-radius:2px;background:'+ev.c+';flex-shrink:0"></div><div class="row-main"><div class="row-name">'+ev.n+'</div><div class="row-meta"><i class="ti ti-clock" style="font-size:11px;vertical-align:-1px;margin-right:3px"></i>'+ev.t+' · <i class="ti ti-map-pin" style="font-size:11px;vertical-align:-1px;margin-right:3px"></i>'+ev.l+'</div></div></div>';}).join('');}
-  html+='</div>';
-  document.getElementById('cal-detail').innerHTML=html;
+  document.getElementById('cal-detail').innerHTML=html+'</div>';
 }
-
 function calPrev(){calState.m--;if(calState.m<0){calState.m=11;calState.y--;}calState.sel=1;renderCal();}
 function calNext(){calState.m++;if(calState.m>11){calState.m=0;calState.y++;}calState.sel=1;renderCal();}
 
-/* ONAY */
-var onayContents=[
-  {title:'Çırak - Kalfa - Usta',caption:'Bilişim dünyasında uzmanlığa giden yol sabır ve pratikle inşa ediliyor! Çıraklıktan ustalığa uzanan bu kademeli eğitim modelimizle çocuklarımız temelden zirveye adım adım yetkinlik kazanarak geleceğe hazırlanıyor.',hashtags:'#TeknolojiEğitimi #GelişimYolculuğu #GeleceğinMucitleri',date:'Paylaşım: 28 Mayıs 2026',bg:'#1C1C2E',txt:'ÇIRAK\nKALFA\nUSTA'},
-  {title:'LMS Sistemi',caption:'Her alanda gelişimi hisset! LMS sistemimizle öğrenme deneyimini bir üst seviyeye taşı.',hashtags:'#LMS #EğitimTeknolojisi #DigitalLearning',date:'Paylaşım: 30 Mayıs 2026',bg:'#0f2027',txt:'LMS\nSistemi'},
-  {title:'Siyah ACT 300',caption:'ACT 300 ile sınırları zorla! Yeni nesil teknoloji eğitiminde bir adım öne geç.',hashtags:'#ACT300 #Teknoloji #BilişimGarajı',date:'Paylaşım: 15 Mayıs 2026',bg:'#1a1a2e',txt:'SIYAH\nACT 300'}
-];
-var selOnay=0;
-function showOnayDetail(idx){
-  selOnay=idx;
-  var c=onayContents[idx];
-  document.getElementById('onay-thumb-txt').innerHTML=c.txt.replace(/\n/g,'<br>');
-  document.getElementById('onay-thumb-area').querySelector('div').style.background=c.bg;
-  document.getElementById('onay-caption').textContent=c.caption;
-  document.getElementById('onay-hashtags').textContent=c.hashtags;
-  document.getElementById('onay-date').textContent=c.date;
-  document.getElementById('onay-detail-wrap').style.display='block';
-  document.getElementById('revize-box').style.display='none';
-  document.getElementById('onay-detail-wrap').scrollIntoView({behavior:'smooth'});
-}
-function showRevizeBox(){
-  var b=document.getElementById('revize-box');
-  b.style.display=b.style.display==='none'?'block':'none';
-}
-function onaylaContent(){
-  var el=document.getElementById('t-cs'+selOnay);
-  if(el){el.textContent=lang==='tr'?'Onaylandı':'Approved';el.className='card-status-tag cst-onay';}
-  document.getElementById('onay-detail-wrap').style.display='none';
-}
-function gonderRevize(){
-  var el=document.getElementById('t-cs'+selOnay);
-  if(el){el.textContent=lang==='tr'?'Revize İstendi':'Revision Requested';el.className='card-status-tag cst-revize';}
-  document.getElementById('revize-box').style.display='none';
-  document.getElementById('onay-detail-wrap').style.display='none';
+/* MÜŞTERİ SOCIAL */
+function showMusteriSocial(){
+  document.getElementById('musteri-social').style.display='flex';
 }
 
-/* IDEIO SOCIAL */
 var socialContents=[
-  {title:'Çırak - Kalfa - Usta',caption:'Bilişim dünyasında uzmanlığa giden yol sabır ve pratikle inşa ediliyor! Çıraklıktan ustalığa uzanan bu kademeli eğitim modelimizle çocuklarımız temelden zirveye adım adım yetkinlik kazanarak geleceğe hazırlanıyor.',hashtags:'#TeknolojiEğitimi #GelişimYolculuğu #GeleceğinMucitleri #Kodlama',date:'Paylaşım: 28 Mayıs 2026',bg:'#1C1C2E',txt:'ÇIRAK\nKALFA\nUSTA'},
+  {title:'Çırak - Kalfa - Usta',caption:'Bilişim dünyasında uzmanlığa giden yol sabır ve pratikle inşa ediliyor!',hashtags:'#TeknolojiEğitimi #GelişimYolculuğu #GeleceğinMucitleri',date:'Paylaşım: 28 Mayıs 2026',bg:'#1C1C2E',txt:'ÇIRAK\nKALFA\nUSTA'},
   {title:'LMS Sistemi',caption:'Her alanda gelişimi hisset! LMS sistemimizle öğrenme deneyimini bir üst seviyeye taşı.',hashtags:'#LMS #EğitimTeknolojisi #DigitalLearning',date:'Paylaşım: 30 Mayıs 2026',bg:'#0f2027',txt:'LMS\nSistemi'},
-  {title:'Siyah ACT 300',caption:'ACT 300 ile sınırları zorla! Yeni nesil teknoloji eğitiminde bir adım öne geç.',hashtags:'#ACT300 #Teknoloji #BilişimGarajı',date:'Paylaşım: 15 Mayıs 2026',bg:'#1a1a2e',txt:'SI\nYAH\nACT 300'}
+  {title:'Siyah ACT 300',caption:'ACT 300 ile sınırları zorla!',hashtags:'#ACT300 #Teknoloji #BilişimGarajı',date:'Paylaşım: 15 Mayıs 2026',bg:'#1a1a2e',txt:'SI\nYAH\nACT 300'}
 ];
 var selSocial=0;
 function showSocialDetail(idx){
   selSocial=idx;
   var c=socialContents[idx];
-  document.getElementById('social-thumb-area').style.background=c.bg;
-  document.getElementById('social-thumb-txt').innerHTML=c.txt.replace(/\n/g,'<br>');
-  document.getElementById('social-caption').textContent=c.caption;
-  document.getElementById('social-hashtags').textContent=c.hashtags;
-  document.getElementById('social-date').textContent=c.date;
-  document.getElementById('social-actions').style.display='grid';
-  document.getElementById('social-revize-box').style.display='none';
-  document.getElementById('social-detail-wrap').style.display='block';
-  document.getElementById('social-detail-wrap').scrollIntoView({behavior:'smooth'});
+  document.getElementById('s-thumb').style.background=c.bg;
+  document.getElementById('s-thumb-txt').innerHTML=c.txt.replace(/\n/g,'<br>');
+  document.getElementById('s-caption').textContent=c.caption;
+  document.getElementById('s-hashtags').textContent=c.hashtags;
+  document.getElementById('s-date').textContent=c.date;
+  document.getElementById('s-actions').style.display='grid';
+  document.getElementById('s-revize-box').style.display='none';
+  document.getElementById('s-detail').style.display='block';
+  document.getElementById('s-detail').scrollIntoView({behavior:'smooth'});
 }
-function socialRevize(){
-  var b=document.getElementById('social-revize-box');
-  b.style.display=b.style.display==='none'?'block':'none';
+function sRevize(){var b=document.getElementById('s-revize-box');b.style.display=b.style.display==='none'?'block':'none';}
+function sOnayla(){
+  var t=document.getElementById('s-tag'+selSocial);
+  if(t){t.textContent='Onaylandı';t.className='cst cst-onay';}
+  document.getElementById('s-actions').style.display='none';
+  document.getElementById('s-detail').style.display='none';
 }
-function socialOnayla(){
-  var tag=document.getElementById('ss-tag'+selSocial);
-  if(tag){tag.textContent='Onaylandı';tag.style.background='rgba(34,197,94,.25)';tag.style.color='#16a34a';}
-  document.getElementById('social-actions').style.display='none';
-  document.getElementById('social-detail-wrap').style.display='none';
+function sRevizeGonder(){
+  var t=document.getElementById('s-tag'+selSocial);
+  if(t){t.textContent='Revize İstendi';t.className='cst cst-rev';}
+  document.getElementById('s-revize-box').style.display='none';
+  document.getElementById('s-detail').style.display='none';
 }
-function socialRevizeGonder(){
-  var tag=document.getElementById('ss-tag'+selSocial);
-  if(tag){tag.textContent='Revize İstendi';tag.style.background='rgba(239,68,68,.25)';tag.style.color='#dc2626';}
-  document.getElementById('social-revize-box').style.display='none';
-  document.getElementById('social-detail-wrap').style.display='none';
-}
+
 renderCal();
 </script>
+
+<!-- MÜŞTERİ SOCIAL EKRANI -->
+<div id="musteri-social" style="display:none;flex-direction:column;min-height:100vh;background:var(--bg)">
+  <div class="social-topbar">
+    <div style="display:flex;align-items:center;gap:8px">
+      <div style="width:30px;height:30px;background:var(--purple);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700">IC</div>
+      <span style="font-size:13px;font-weight:700;color:var(--text)">ideio social</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <div class="lang-row"><div class="lang-btn on" onclick="setLang('tr',this)">TR</div><div class="lang-btn" onclick="setLang('en',this)">EN</div></div>
+      <div class="icon-btn" onclick="toggleTheme()"><i class="ti ti-moon" style="font-size:15px"></i></div>
+      <button class="logout-btn" onclick="doLogout()"><i class="ti ti-logout" style="font-size:13px"></i>Çıkış</button>
+    </div>
+  </div>
+  <div style="padding:16px;max-width:800px;margin:0 auto;width:100%;display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:44px;height:44px;border-radius:12px;background:var(--pbg);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--purple)">BG</div>
+      <div><div style="font-size:16px;font-weight:700;color:var(--text)">bilişim_garajı</div><div style="font-size:12px;color:var(--text2)">7.685 takipçi · 3 onay bekliyor</div></div>
+    </div>
+    <div class="period-scroll">
+      <div class="period">Tümü</div><div class="period">Oca</div><div class="period">Şub</div><div class="period">Mar</div><div class="period">Nis</div><div class="period on">1 May — 31 May</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center"><div style="font-size:18px;font-weight:700;color:var(--amber)">3</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Onay bekliyor</div></div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center"><div style="font-size:18px;font-weight:700;color:var(--green)">8</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Onaylandı</div></div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center"><div style="font-size:18px;font-weight:700;color:var(--purple)">11</div><div style="font-size:10px;color:var(--text2);margin-top:2px">Toplam</div></div>
+    </div>
+    <div style="font-size:12px;font-weight:700;color:var(--text2)">İçerikler — Mayıs 2026</div>
+    <div class="grid-2">
+      <div class="content-card" onclick="showSocialDetail(0)">
+        <div class="card-thumb" style="background:#1C1C2E;display:flex;align-items:center;justify-content:center;padding:10px"><div style="text-align:center"><div style="font-size:14px;font-weight:900;color:#fff;line-height:1.2">ÇIRAK<br>KALFA<br>USTA</div></div><div class="cst cst-bek" id="s-tag0">Onay Bekliyor</div></div>
+        <div class="card-foot"><div class="card-foot-name">Çırak - Kalfa - Usta</div><div class="card-foot-date">28 Mayıs 2026</div></div>
+      </div>
+      <div class="content-card" onclick="showSocialDetail(1)">
+        <div class="card-thumb" style="background:#0f2027;display:flex;align-items:center;justify-content:center"><div style="display:flex;flex-direction:column;align-items:center;gap:6px"><div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center"><i class="ti ti-player-play" style="font-size:14px;color:#fff"></i></div><div style="font-size:9px;color:rgba(255,255,255,.5)">LMS Sistemi</div></div><div class="cst cst-bek" id="s-tag1">Onay Bekliyor</div></div>
+        <div class="card-foot"><div class="card-foot-name">LMS sistemi tanıtım</div><div class="card-foot-date">30 Mayıs 2026</div></div>
+      </div>
+      <div class="content-card" onclick="showSocialDetail(2)">
+        <div class="card-thumb" style="background:#1a1a2e;display:flex;align-items:center;justify-content:center;padding:10px"><div style="text-align:center"><div style="font-size:18px;font-weight:900;color:#fff;line-height:1.1">SI<br>YAH</div><div style="font-size:12px;font-weight:700;color:#fff">ACT 300</div></div><div class="cst cst-bek" id="s-tag2">Onay Bekliyor</div></div>
+        <div class="card-foot"><div class="card-foot-name">Siyah ACT 300</div><div class="card-foot-date">15 Mayıs 2026</div></div>
+      </div>
+      <div class="content-card">
+        <div class="card-thumb" style="background:#dc2626;display:flex;align-items:center;justify-content:center;padding:10px"><div style="text-align:center"><div style="font-size:16px;font-weight:900;color:#fff;line-height:1.1">KIR<br>MIZI</div></div><div class="cst cst-onay">Paylaşıldı</div></div>
+        <div class="card-foot"><div class="card-foot-name">Kırmızı ACT 200</div><div class="card-foot-date">Paylaşıldı: 1 Mayıs</div></div>
+      </div>
+    </div>
+    <div id="s-detail" style="display:none">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden">
+        <div style="background:var(--bg3);display:flex;align-items:center;justify-content:center;padding:24px;min-height:160px">
+          <div style="width:110px;aspect-ratio:9/16;border-radius:10px;display:flex;align-items:center;justify-content:center;padding:12px" id="s-thumb">
+            <div style="font-size:12px;font-weight:900;color:#fff;text-align:center;line-height:1.2" id="s-thumb-txt">İçerik</div>
+          </div>
+        </div>
+        <div style="padding:14px 16px;border-bottom:1px solid var(--border)">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+            <div style="width:28px;height:28px;border-radius:50%;background:var(--pbg);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--purple)">BG</div>
+            <div><div style="font-size:12px;font-weight:700;color:var(--text)">bilişim_garajı</div><div style="font-size:10px;color:var(--text2)">7.685 takipçi</div></div>
+          </div>
+          <div style="font-size:12px;color:var(--text);line-height:1.6" id="s-caption"></div>
+          <div style="font-size:11px;color:var(--purple);margin-top:6px" id="s-hashtags"></div>
+          <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)"><i class="ti ti-calendar" style="font-size:13px"></i><span id="s-date"></span></div>
+        </div>
+        <div class="onay-row" id="s-actions">
+          <button class="onay-btn ob-rev" onclick="sRevize()"><i class="ti ti-refresh" style="font-size:15px"></i>Revize</button>
+          <button class="onay-btn ob-ok" onclick="sOnayla()"><i class="ti ti-check" style="font-size:15px"></i>Onayla</button>
+        </div>
+        <div id="s-revize-box" style="display:none;padding:14px 16px;border-top:1px solid var(--border)">
+          <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:6px">Revize notunuzu yazın</div>
+          <textarea class="form-input" style="resize:none;min-height:70px" placeholder="Nelerin değişmesini istiyorsunuz?"></textarea>
+          <button class="big-btn" style="margin-top:10px;margin-bottom:0" onclick="sRevizeGonder()"><i class="ti ti-send"></i>Gönder</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
